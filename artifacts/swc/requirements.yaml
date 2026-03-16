@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "For elegant page transitions and scroll animations matching the luxury aesthetic"
+  "lucide-react": "For crisp, minimal SVG icons matching the editorial style"
+  "clsx": "For merging conditional Tailwind classes gracefully"
+  "tailwind-merge": "For merging conditional Tailwind classes gracefully"
+
+images:
+  - path: "artifacts/swc/public/images/hero-abstract.png"
+    description: "Minimalist luxury abstract 3D shape, flowing silk or soft geometric curves in warm cream and charcoal tones, soft studio lighting, editorial high-end fashion aesthetic, no text"
+    aspect_ratio: "16:9"
+  - path: "artifacts/swc/public/images/avatar.png"
+    description: "Minimalist elegant female avatar profile picture, editorial fashion style, soft studio lighting, muted beige and gray tones"
+    aspect_ratio: "1:1"
+
+notes:
+  - "This is a purely static SPA representing a multi-page sales funnel. No backend API calls are necessary per the implementation notes."
+  - "Routing is handled via Wouter with Framer Motion transitions."

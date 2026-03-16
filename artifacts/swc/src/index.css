@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-display: 'Bodoni Moda', serif;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-gold: hsl(var(--gold));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-card: hsl(var(--card));
+}
+
+:root {
+  --background: 38 25% 95%; /* #F5F2ED Cream */
+  --foreground: 0 0% 10%;   /* #1A1A1A Charcoal */
+  --primary: 0 0% 10%;
+  --primary-foreground: 38 25% 95%;
+  --gold: 39 49% 56%;       /* #C5A059 */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
+  --border: 0 0% 85%;
+  --card: 0 0% 100%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden selection:bg-foreground selection:text-background;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .luxury-border {
+    @apply border border-foreground/10;
+  }
+  
+  .glass-nav {
+    @apply bg-background/85 backdrop-blur-md border-b border-foreground/5;
+  }
+
+  .btn-luxury {
+    @apply tracking-[0.3em] transition-all duration-300;
+  }
+  
+  .btn-luxury:hover {
+    @apply tracking-[0.4em] bg-black shadow-lg;
+  }
+  
+  .income-pill {
+    @apply bg-card border border-foreground/10 px-4 py-2 text-[9px] font-semibold tracking-widest rounded-full uppercase transition-all duration-300 hover:bg-muted hover:-translate-y-0.5;
+  }
+}
