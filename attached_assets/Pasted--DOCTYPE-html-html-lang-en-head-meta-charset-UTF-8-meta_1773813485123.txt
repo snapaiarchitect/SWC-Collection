@@ -1,0 +1,254 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>SWC 2.0 | The New Collection</title> <script src="https://cdn.tailwindcss.com"></script> <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"> <style> :root { --cream: #F5F2ED; --charcoal: #1A1A1A; --gold: #C5A059; } body { font-family: 'Montserrat', sans-serif; background-color: var(--cream); color: var(--charcoal); overflow-x: hidden; } h1, h2, h3, h4, .serif { font-family: 'Bodoni Moda', serif; } .luxury-border { border: 1px solid rgba(26, 26, 26, 0.1); } .page-transition { transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; } .hidden-page { display: none; opacity: 0; transform: translateY(10px); } .active-page { display: block; opacity: 1; transform: translateY(0); } .module-row:hover { background-color: rgba(0,0,0,0.02); padding-left: 10px; } .glass-nav { background: rgba(245, 242, 237, 0.85); backdrop-filter: blur(10px); } .btn-luxury { letter-spacing: 0.3em; transition: all 0.3s ease; } .btn-luxury:hover { letter-spacing: 0.4em; background: #000; } .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; } .accordion-item.active .accordion-content { max-height: 200px; } .accordion-item.active svg { transform: rotate(180deg); } .income-pill { background: white; border: 1px solid rgba(0,0,0,0.05); padding: 8px 16px; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; border-radius: 99px; text-transform: uppercase; } </style> </head> <body class="antialiased">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-black/5 px-6 py-4">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <span class="serif text-xl tracking-widest font-bold cursor-pointer" onclick="navigateTo('home')">SWC 2.0</span>
+        <div class="flex items-center gap-6">
+            <button onclick="navigateTo('curriculum')" class="hidden md:block text-[10px] uppercase tracking-widest font-semibold opacity-60 hover:opacity-100 transition">Curriculum</button>
+            <button onclick="navigateTo('vault')" class="bg-[#1A1A1A] text-white px-6 py-2.5 text-[10px] uppercase tracking-widest font-bold rounded-full btn-luxury">The Vault</button>
+        </div>
+    </div>
+</nav>
+<!-- Main Container -->
+<main class="max-w-2xl mx-auto bg-white shadow-2xl min-h-screen pt-20 pb-10">
+    
+    <!-- PAGE: HOME -->
+    <div id="home" class="page-transition active-page">
+        <!-- Hero -->
+        <section class="pt-12 pb-16 px-8 text-center">
+            <p class="text-[9px] uppercase tracking-[0.4em] mb-4 opacity-50">Master Resell Rights Included</p>
+            <h1 class="text-4xl md:text-6xl mb-6 leading-tight">THE NEW <br><span class="italic text-3xl md:text-5xl">Collection</span></h1>
+            
+            <div class="relative my-12 luxury-border rounded-2xl overflow-hidden bg-gray-50 aspect-video flex items-center justify-center">
+                <div class="absolute inset-0 opacity-10 flex items-center justify-center">
+                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                </div>
+                <span class="serif text-xl italic opacity-30 px-6 text-center">Your Gateway to Digital Wealth</span>
+            </div>
+            <p class="text-sm leading-relaxed font-light mb-10 max-w-md mx-auto opacity-80">
+                A comprehensive system built for the modern digital entrepreneur. 56+ modules, 18 income streams, and a complete library of plug-and-play marketing assets.
+            </p>
+            <div class="flex flex-col gap-4">
+                <button onclick="navigateTo('vault')" class="bg-black text-white py-5 px-8 text-[11px] font-bold uppercase tracking-[0.3em] rounded-sm shadow-xl btn-luxury">
+                    Explore The Vault
+                </button>
+                <button onclick="navigateTo('curriculum')" class="py-4 px-8 text-[10px] font-bold uppercase tracking-widest opacity-60 hover:opacity-100 transition">
+                    Full Course Details ↓
+                </button>
+            </div>
+        </section>
+        <!-- 18 Streams Quick View -->
+        <section class="py-12 px-8 text-center">
+            <h3 class="serif text-xl mb-8 italic">One Course. 18 Income Streams.</h3>
+            <div class="flex flex-wrap justify-center gap-2">
+                <span class="income-pill">Affiliate Marketing</span>
+                <span class="income-pill">MRR / Resell</span>
+                <span class="income-pill">PLR Vault</span>
+                <span class="income-pill">Drop Shipping</span>
+                <span class="income-pill">UGC Branding</span>
+                <span class="income-pill">Amazon Influencer</span>
+                <span class="income-pill">Digital Etsy</span>
+                <span class="income-pill">TikTok Shop</span>
+            </div>
+            <button onclick="navigateTo('curriculum')" class="mt-8 text-[9px] uppercase tracking-widest opacity-40 hover:opacity-100">See full list of 18 →</button>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-16 px-8 bg-gray-50 border-y border-black/5">
+            <h3 class="serif text-3xl text-center mb-12 italic">Voices of Success</h3>
+            <div class="space-y-6">
+                <div class="bg-white p-6 luxury-border rounded-xl">
+                    <p class="text-xs italic font-light leading-loose mb-4">"The plug-and-play stories alone paid for the course in my first week. I didn't have to guess what to post—I just followed the template."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gray-200"></div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">Sarah M. <span class="opacity-30 font-light ml-2">Digital Creator</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Support / Contact -->
+        <section class="py-16 px-8 text-center">
+            <h3 class="serif text-2xl mb-4 italic">Have questions?</h3>
+            <p class="text-xs font-light mb-6 opacity-60">Our dedicated support team is available 24/7 to help you transition into the digital space.</p>
+            <div class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                support@swccollection.com
+            </div>
+        </section>
+        <!-- Final Home CTA -->
+        <section class="py-16 px-8 text-center bg-[#1A1A1A] text-white">
+            <h2 class="serif text-3xl mb-6">The time is <span class="italic">now.</span></h2>
+            <p class="text-xs font-light mb-8 opacity-60">Join 5,000+ members building their digital empires.</p>
+            <button onclick="navigateTo('vault')" class="w-full bg-white text-black py-5 text-[11px] font-bold uppercase tracking-[0.3em]">Secure Access — $497</button>
+        </section>
+    </div>
+    <!-- PAGE: CURRICULUM -->
+    <div id="curriculum" class="page-transition hidden-page">
+        <section class="py-12 px-8">
+            <button onclick="navigateTo('home')" class="text-[9px] uppercase tracking-widest mb-10 opacity-40 hover:opacity-100 flex items-center gap-2">
+                ← Back to Home
+            </button>
+            
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl mb-3 italic">The Roadmap</h2>
+                <p class="uppercase tracking-widest text-[10px] font-semibold opacity-60">Everything you need to scale</p>
+            </div>
+            <!-- 18 Streams Detail -->
+            <div class="mb-20">
+                <h3 class="serif text-2xl mb-8 border-b border-black/5 pb-4">The 18 Income Streams</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Affiliate Marketing</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Master Resell Rights</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> PLR Products</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Drop Shipping</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> UGC Branding</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Amazon Influencer</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Etsy Digital Shop</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Pinterest Ads</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> TikTok Shop</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Print on Demand</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Course Creation</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Coaching/Mentorship</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Website Flipping</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Airbnb Management</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> E-com Reselling</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Facebook Ads</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Podcast Scaling</div>
+                    <div class="text-[10px] uppercase tracking-widest flex items-center gap-3"><span class="w-1.5 h-1.5 bg-black/20 rounded-full"></span> Threads Mastery</div>
+                </div>
+            </div>
+            <h3 class="serif text-2xl mb-8 border-b border-black/5 pb-4">Course Modules</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-0" id="module-list">
+                <!-- JS Injected Modules -->
+            </div>
+            <div class="mt-20 p-8 bg-gray-50 rounded-xl text-center border border-black/5">
+                <h3 class="serif text-2xl mb-4 italic">Ready to start?</h3>
+                <button onclick="navigateTo('vault')" class="bg-black text-white px-10 py-4 text-[10px] uppercase tracking-[0.2em] font-bold">Get Instant Access</button>
+            </div>
+        </section>
+    </div>
+    <!-- PAGE: THE VAULT -->
+    <div id="vault" class="page-transition hidden-page">
+        <section class="py-12 px-8">
+            <button onclick="navigateTo('home')" class="text-[9px] uppercase tracking-widest mb-10 opacity-40 hover:opacity-100 flex items-center gap-2">
+                ← Back to Home
+            </button>
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl mb-3 italic">The Resource Vault</h2>
+                <p class="uppercase tracking-widest text-[10px] font-semibold opacity-60">Your Plug-and-Play Assets</p>
+            </div>
+            <div class="space-y-8">
+                <!-- Visual Assets -->
+                <div class="luxury-border p-8 rounded-2xl relative overflow-hidden group">
+                    <span class="text-[9px] font-bold tracking-[0.3em] uppercase opacity-40">Visual Assets</span>
+                    <h4 class="serif text-2xl mt-2 mb-3">Instagram Reel Covers</h4>
+                    <p class="text-xs font-light leading-relaxed opacity-70 mb-6">30+ Luxury, minimalist reel covers designed in Canva. Just swap the text and upload.</p>
+                    <div class="flex gap-2">
+                        <div class="h-12 w-8 bg-gray-100 luxury-border"></div>
+                        <div class="h-12 w-8 bg-gray-200 luxury-border"></div>
+                        <div class="h-12 w-8 bg-gray-300 luxury-border"></div>
+                    </div>
+                </div>
+                <!-- Caption Templates -->
+                <div class="luxury-border p-8 rounded-2xl bg-gray-50">
+                    <span class="text-[9px] font-bold tracking-[0.3em] uppercase opacity-40">Plug & Play Copy</span>
+                    <h4 class="serif text-2xl mt-2 mb-3 italic">Caption Templates</h4>
+                    <p class="text-xs font-light opacity-70 mb-6">High-conversion captions for when you're stuck. Just copy and paste.</p>
+                    
+                    <div class="bg-white p-5 rounded-lg border border-black/5">
+                        <p class="text-[10px] font-bold mb-2 uppercase opacity-40">Template: The Result Hook</p>
+                        <p class="text-[10px] leading-relaxed opacity-80 italic italic">
+                            "I used to think [Pain Point] was just my reality. Then I discovered [SWC 2.0 Method]. Fast forward [Time] and I've [Specific Result]. Want the roadmap? Link in bio."
+                        </p>
+                        <button class="mt-4 text-[9px] font-bold uppercase tracking-widest border-b border-black">Copy Template</button>
+                    </div>
+                </div>
+                <!-- Secure Checkout Section -->
+                <div class="bg-white luxury-border p-8 rounded-2xl text-center">
+                    <div class="flex justify-center mb-6 grayscale opacity-40">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.4 0 2.5 1.1 2.5 2.5S13.4 12 12 12s-2.5-1.1-2.5-2.5S10.6 7 12 7zm0 13.93c-3.73-1.12-6.5-5.06-6.5-9.43V6.26l6.5-2.89 6.5 2.89V11.5c0 4.37-2.77 8.31-6.5 9.43z"></path></svg>
+                    </div>
+                    <h4 class="serif text-2xl mb-2 italic">Secure Enrollment</h4>
+                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-30 mb-8">SSL Secured | Instant Access</p>
+                    
+                    <div class="space-y-4 max-w-sm mx-auto">
+                        <div class="flex justify-between text-xs py-2 border-b border-black/5">
+                            <span>SWC 2.0 Collection</span>
+                            <span class="font-bold">$497.00</span>
+                        </div>
+                        <div class="flex justify-between text-xs py-2">
+                            <span>Lifetime Updates</span>
+                            <span class="text-green-600 font-bold uppercase tracking-widest text-[9px]">Included</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-black text-white mt-8 py-5 text-[11px] font-bold uppercase tracking-[0.3em] shadow-2xl">
+                        PAY WITH STRIPE/CREDIT CARD
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 px-8 text-center border-t border-black/5 mt-10">
+        <p class="serif italic text-lg mb-2">SWC 2.0</p>
+        <p class="text-[8px] uppercase tracking-[0.4em] opacity-40 mb-6">Success with Canva 2026</p>
+        <div class="flex justify-center gap-6 text-[9px] uppercase tracking-widest opacity-30">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">MRR License</a>
+        </div>
+    </footer>
+</main>
+<script>
+    // Data: Learning Modules
+    const modules = [
+        "Start Up Steps", "Beginners Blueprint", "Affiliate Setup", "The Game Plan", 
+        "First Impression", "Knowledge Is Power", "All Things Confidence", "Authenticity Matters",
+        "Effective Selling", '"Selling" without Selling', "Content Mastery", "All Things Branding",
+        "Consistency is KEY", "Let's talk Mindset", "Digital Ethics", "A Day In The Life",
+        "Instagram Blueprint", "Going Faceless", "Multi Platform Mastery", "Navigating Stan.store",
+        "PLR Vault", "Mastering Reels", "Email Marketing", "Digital Products",
+        "The Content Vault", "Live Recordings", "Drop Shipping", "UGC",
+        "Securing Brand Deals", "Let's Talk Taxes", "Creating on Canva", "APPS for Visuals",
+        "TikTok Mastery", "TikTok Lives", "TikTok Shop Level Up", "Selling on Etsy",
+        "Selling on Pinterest", "Branding Essentials", "Faceless PLR", "Selling in Stories",
+        "Sales Mastery", "Amazon Reviews", "Affiliate Marketing", "Print on Demand",
+        "Theme Pages", "Website Flipping", "Coach Masters", "Creating Your Course",
+        "Airbnb", "Art of Reselling", "Monetizing FB", "Monetizing Reels",
+        "Podcast Setup", "Threads Mastery", "Network Marketing", "Pinterest Sales"
+    ];
+    // Function: Navigation Logic
+    function navigateTo(pageId) {
+        const pages = ['home', 'curriculum', 'vault'];
+        pages.forEach(id => {
+            const el = document.getElementById(id);
+            if (id === pageId) {
+                el.classList.remove('hidden-page');
+                el.classList.add('active-page');
+            } else {
+                el.classList.add('hidden-page');
+                el.classList.remove('active-page');
+            }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Initialize: Build Module List
+    const moduleListContainer = document.getElementById('module-list');
+    modules.forEach((module, index) => {
+        const num = (index + 1).toString().padStart(2, '0');
+        const item = document.createElement('div');
+        item.className = "module-row flex items-center gap-4 py-4 border-b border-black/[0.03] transition-all duration-300 cursor-default";
+        item.innerHTML = `
+            <span class="text-[10px] font-bold opacity-20 tracking-tighter">${num}</span>
+            <span class="text-[10px] uppercase tracking-widest font-medium opacity-80">${module}</span>
+        `;
+        moduleListContainer.appendChild(item);
+    });
+    // Function: Accordion Toggle
+    function toggleAccordion(btn) {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+    }
+</script>
+</body> </html>
