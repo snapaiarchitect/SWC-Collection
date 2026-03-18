@@ -25,22 +25,17 @@ export function Navbar({ isLanding, landingSection, onLandingNavigate }: NavbarP
         }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <button
-            onClick={() => onLandingNavigate?.("home")}
+          <span
             style={{
               fontFamily: "'Bodoni Moda', serif",
               fontSize: "1.25rem",
               letterSpacing: "0.1em",
               fontWeight: 700,
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: "#1A1A1A",
-              padding: 0
+              color: "#1A1A1A"
             }}
           >
             SWC 2.0
-          </button>
+          </span>
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
             <button
               onClick={() => onLandingNavigate?.("curriculum")}
@@ -54,12 +49,27 @@ export function Navbar({ isLanding, landingSection, onLandingNavigate }: NavbarP
                 opacity: landingSection === "curriculum" ? 1 : 0.55,
                 cursor: "pointer",
                 color: "#1A1A1A",
-                padding: 0,
-                display: "none"
+                padding: 0
               }}
-              id="landing-nav-curriculum"
             >
               Curriculum
+            </button>
+            <button
+              onClick={() => onLandingNavigate?.("vault")}
+              style={{
+                background: "none",
+                border: "none",
+                fontSize: "10px",
+                textTransform: "uppercase",
+                letterSpacing: "0.15em",
+                fontWeight: 600,
+                opacity: landingSection === "vault" ? 1 : 0.55,
+                cursor: "pointer",
+                color: "#1A1A1A",
+                padding: 0
+              }}
+            >
+              The Vault
             </button>
             <Link
               href="/home"
