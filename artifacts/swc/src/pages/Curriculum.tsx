@@ -32,7 +32,7 @@ export default function Curriculum() {
     <PageTransition>
       <section className="pt-12 pb-20 px-8">
         <Link 
-          href="/home" 
+          href="/" 
           className="text-[9px] uppercase tracking-widest mb-12 opacity-40 hover:opacity-100 flex items-center gap-2 w-fit transition-opacity"
         >
           <ArrowLeft className="w-3 h-3" />
