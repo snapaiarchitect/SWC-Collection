@@ -1,0 +1,786 @@
+[
+  {
+    "id": "start-up-steps",
+    "title": "Start Up Steps",
+    "description": "Lay a solid foundation before your first dollar is ever made. This module walks you through the essential setup checklist every digital entrepreneur needs — from choosing your niche to registering your business identity online. You'll leave with a clear roadmap and zero confusion about where to start.",
+    "actionItems": [
+      "Choose your primary niche and write a one-sentence mission statement for your brand",
+      "Register your business name and secure matching handles across Instagram, TikTok, and Pinterest",
+      "Set up a dedicated business email address and organize a folder system for your digital assets"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Business Setup Checklist PDF" },
+      { "type": "Canva Template", "label": "Brand Identity Starter Kit" }
+    ]
+  },
+  {
+    "id": "beginners-blueprint",
+    "title": "Beginners Blueprint",
+    "description": "If you're brand new to the digital space, this is your starting line. The Beginners Blueprint demystifies the online business world with a step-by-step breakdown of how money is made through digital products, content, and community. By the end of this module, you'll understand exactly which path aligns with your skills, lifestyle, and goals.",
+    "actionItems": [
+      "Complete the income stream quiz to identify your top three monetization methods",
+      "Write down your weekly hour availability and define your 90-day income goal",
+      "Join one online community in your niche and introduce yourself to start building connections"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Beginner's Income Stream Overview" },
+      { "type": "Canva Template", "label": "90-Day Goal Setting Worksheet" }
+    ]
+  },
+  {
+    "id": "affiliate-setup",
+    "title": "Affiliate Setup",
+    "description": "Affiliate marketing is one of the fastest ways to earn commissions without creating a single product. This module covers how to find the right programs, apply strategically, and embed affiliate links naturally into your content without feeling salesy. You'll learn exactly how to track your performance and optimize for maximum passive income.",
+    "actionItems": [
+      "Apply to at least three affiliate programs that align with your niche (e.g., Amazon Associates, ShareASale, or brand-specific programs)",
+      "Create a resource page or link-in-bio section dedicated to your top affiliate recommendations",
+      "Draft your first five pieces of affiliate-driven content using the swipe copy framework provided"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Top 50 Affiliate Programs by Niche" },
+      { "type": "Canva Template", "label": "Affiliate Link Tracker Spreadsheet" }
+    ]
+  },
+  {
+    "id": "the-game-plan",
+    "title": "The Game Plan",
+    "description": "Success online is intentional, not accidental. The Game Plan module gives you a strategic framework for building a profitable digital business with realistic timelines and measurable milestones. You'll map out your content calendar, income targets, and daily non-negotiables so every action you take has a purpose.",
+    "actionItems": [
+      "Build your first 30-day content and revenue roadmap using the strategy template",
+      "Identify your top three daily income-producing activities (IPAs) and schedule them into your calendar",
+      "Define your 'why' and write it somewhere visible to keep you anchored when things get hard"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "30-Day Business Launch Plan" },
+      { "type": "Canva Template", "label": "Monthly Revenue Tracker" }
+    ]
+  },
+  {
+    "id": "first-impression",
+    "title": "First Impression",
+    "description": "You have three seconds to stop a scroll and earn a follow — your first impression determines your entire conversion rate. This module covers how to design a profile that communicates authority, trust, and relatability from the moment someone lands on your page. From bio copy to highlight covers, you'll master every element of a compelling digital storefront.",
+    "actionItems": [
+      "Rewrite your bio using the Authority + Outcome + CTA formula taught in this module",
+      "Design a cohesive set of highlight covers that match your brand palette in Canva",
+      "Update your profile photo and link-in-bio to reflect a premium, intentional brand identity"
+    ],
+    "resources": [
+      { "type": "Canva Template", "label": "Instagram Highlight Cover Pack" },
+      { "type": "PDF Guide", "label": "Bio Writing Formula Cheat Sheet" }
+    ]
+  },
+  {
+    "id": "knowledge-is-power",
+    "title": "Knowledge Is Power",
+    "description": "The more you understand your audience, your market, and your competitors, the more money you'll make. This module teaches you how to research your niche deeply, identify content gaps, and position yourself as the go-to authority. You'll learn to use free tools to gather intelligence that most creators completely ignore.",
+    "actionItems": [
+      "Spend 30 minutes analyzing the top five accounts in your niche and document their content pillars",
+      "Use Google Trends and Instagram search to identify three underserved topics in your space",
+      "Create a competitor analysis document and update it monthly to stay ahead of the market"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Niche Research Framework Guide" },
+      { "type": "Canva Template", "label": "Competitor Analysis Worksheet" }
+    ]
+  },
+  {
+    "id": "all-things-confidence",
+    "title": "All Things Confidence",
+    "description": "Imposter syndrome is the number one silent killer of digital businesses. This module confronts the mental blocks that keep entrepreneurs stuck before they ever post their first piece of content. You'll build a confidence muscle through practical exercises, mindset reframes, and evidence-based strategies that transform self-doubt into decisive action.",
+    "actionItems": [
+      "Write 10 personal and professional wins from the past year to build an evidence-based confidence foundation",
+      "Record a one-minute video of yourself talking about your niche — you don't need to post it, just practice",
+      "Identify your top three confidence blockers and apply the reframe technique taught in this module"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Confidence Building Workbook" },
+      { "type": "PDF Guide", "label": "Daily Affirmation & Mindset Priming Guide" }
+    ]
+  },
+  {
+    "id": "authenticity-matters",
+    "title": "Authenticity Matters",
+    "description": "In a world saturated with curated perfection, authenticity is your biggest competitive advantage. This module shows you how to share your story, values, and personality in a way that magnetizes your ideal audience without oversharing or compromising your privacy. Real connection drives real revenue — and you'll learn exactly how to create it.",
+    "actionItems": [
+      "Write your brand origin story using the three-part storytelling framework (struggle, shift, solution)",
+      "Identify three personal values that will guide what you share and what you keep private",
+      "Create one authentic 'behind the scenes' post that invites your audience into your process"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Brand Storytelling Framework" },
+      { "type": "Canva Template", "label": "Story-Driven Post Templates" }
+    ]
+  },
+  {
+    "id": "effective-selling",
+    "title": "Effective Selling",
+    "description": "Selling is a skill, and like any skill, it can be learned, practiced, and mastered. This module breaks down the psychology of buyer behavior and teaches you a conversational sales framework that converts without pressure or manipulation. You'll discover how to make your audience feel understood, not sold to.",
+    "actionItems": [
+      "Identify the top three objections your audience has and craft a response for each using the Feel-Felt-Found method",
+      "Write a sales caption for your core offer using the Pain-Agitate-Solution formula",
+      "Practice one sales conversation this week — in DMs, on a call, or through a story poll"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Sales Psychology & Objection Handling Guide" },
+      { "type": "Canva Template", "label": "High-Converting Caption Swipe File" }
+    ]
+  },
+  {
+    "id": "selling-without-selling",
+    "title": "\"Selling\" without Selling",
+    "description": "The most powerful sales tool is content that educates, entertains, and builds desire without ever feeling like a pitch. This module teaches you the art of soft selling — weaving your offer naturally into value-driven posts so your audience buys without ever feeling pressured. You'll create content that sells 24/7, even while you sleep.",
+    "actionItems": [
+      "Craft three 'value-first' posts that subtly demonstrate the transformation your offer provides",
+      "Create a content series that answers your audience's biggest questions while naturally positioning your product as the solution",
+      "Use the 4-1 content ratio: post four educational or entertaining pieces for every one direct sales post"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Soft Sell Content Strategy Guide" },
+      { "type": "Canva Template", "label": "Value-First Post Templates" }
+    ]
+  },
+  {
+    "id": "content-mastery",
+    "title": "Content Mastery",
+    "description": "Content is the engine of every digital business, and this module teaches you to run it like a machine. You'll learn how to create high-performing content efficiently, repurpose it across platforms, and build a library that works for you long after it's published. This is the module that eliminates the 'I don't know what to post' problem forever.",
+    "actionItems": [
+      "Define your five core content pillars and create a repeating weekly posting schedule around them",
+      "Batch-create 10 pieces of content in one sitting using the content template system provided",
+      "Set up a content repurposing workflow that turns one idea into posts for at least three platforms"
+    ],
+    "resources": [
+      { "type": "Canva Template", "label": "Content Calendar Template" },
+      { "type": "PDF Guide", "label": "Content Repurposing Playbook" }
+    ]
+  },
+  {
+    "id": "all-things-branding",
+    "title": "All Things Branding",
+    "description": "A strong brand is the difference between being scrolled past and being remembered. This module covers every dimension of brand building — from your visual identity and color palette to your brand voice and personality. You'll walk away with a cohesive, premium brand that communicates exactly who you are and who you serve.",
+    "actionItems": [
+      "Define your brand's core color palette (2-3 colors), typography, and visual aesthetic in a simple brand board",
+      "Write a brand voice guide that describes your tone in 5 adjectives and lists three things you would never say",
+      "Audit your existing content and update any posts that feel off-brand to create a cohesive feed aesthetic"
+    ],
+    "resources": [
+      { "type": "Canva Template", "label": "Brand Board Builder Template" },
+      { "type": "PDF Guide", "label": "Brand Voice & Identity Workbook" }
+    ]
+  },
+  {
+    "id": "consistency-is-key",
+    "title": "Consistency is KEY",
+    "description": "The algorithm rewards consistency, and so do audiences. This module addresses the real reasons entrepreneurs struggle to show up consistently and gives you a system that makes showing up the path of least resistance. You'll build habits, batching routines, and accountability structures that keep you posting even on your worst days.",
+    "actionItems": [
+      "Set up a weekly content batching session — block two to three hours in your calendar and protect it",
+      "Pre-schedule at least two weeks of content using a scheduling tool like Later or Buffer",
+      "Create a 'minimum viable post' fallback for days when full production isn't possible"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Content Batching System Guide" },
+      { "type": "Canva Template", "label": "Weekly Posting Schedule Template" }
+    ]
+  },
+  {
+    "id": "lets-talk-mindset",
+    "title": "Let's talk Mindset",
+    "description": "Your business will only grow as much as your mindset allows it to. This module goes deep on the mental frameworks, daily habits, and belief systems of seven-figure digital entrepreneurs. You'll identify the unconscious stories holding you back and replace them with a growth-oriented identity that supports the income you're working toward.",
+    "actionItems": [
+      "Complete the limiting beliefs audit and identify your top three money or success blocks",
+      "Implement a 10-minute morning routine that includes journaling, visualization, or affirmation practice",
+      "Read one personal development book or listen to one mindset podcast per week for 90 days"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Limiting Beliefs Audit Workbook" },
+      { "type": "PDF Guide", "label": "Mindset & Identity Shift Guide" }
+    ]
+  },
+  {
+    "id": "digital-ethics",
+    "title": "Digital Ethics",
+    "description": "Building a sustainable business means operating with integrity, transparency, and respect for both your audience and the broader digital community. This module covers the ethical standards every creator should uphold — from honest marketing and disclosure requirements to protecting your intellectual property and respecting others'. A reputation built on trust is worth more than any quick sale.",
+    "actionItems": [
+      "Add proper FTC-compliant disclosure language to all affiliate and sponsored content you post",
+      "Review your offer descriptions to ensure every claim is truthful, specific, and substantiated",
+      "Create a simple terms and refund policy for your digital products and link it from your sales pages"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "FTC Disclosure & Legal Compliance Guide" },
+      { "type": "PDF Guide", "label": "Digital Business Ethics Checklist" }
+    ]
+  },
+  {
+    "id": "a-day-in-the-life",
+    "title": "A Day In The Life",
+    "description": "What does a profitable, sustainable digital business actually look like day-to-day? This module pulls back the curtain on a real entrepreneur's schedule — showing you how to structure your time for income-producing activities, creative work, and rest without burning out. You'll design a daily routine that fits your life while building a business that works.",
+    "actionItems": [
+      "Time-block your ideal business day in 90-minute focus sessions using the energy mapping exercise",
+      "Identify your three non-negotiable daily tasks and anchor them to existing habits using habit stacking",
+      "Review your current time leaks and cut or delegate at least one low-value activity this week"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Entrepreneur Daily Schedule Template" },
+      { "type": "Canva Template", "label": "Time Blocking & Productivity Planner" }
+    ]
+  },
+  {
+    "id": "instagram-blueprint",
+    "title": "Instagram Blueprint",
+    "description": "Instagram remains one of the most powerful platforms for building a profitable personal brand, and this module teaches you to use it strategically. From Reels strategy and carousel optimization to story sequences and follower conversion tactics, you'll learn the exact techniques that turn a casual account into a client-attracting machine. Every element of the platform is covered, from the algorithm to the analytics.",
+    "actionItems": [
+      "Optimize your Instagram profile with a keyword-rich bio, searchable name field, and one clear CTA",
+      "Plan and schedule your first two weeks of Reels using the viral hook formulas provided",
+      "Set up a story engagement sequence — question, poll, and DM prompt — to warm up your audience weekly"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Instagram Algorithm & Growth Guide" },
+      { "type": "Canva Template", "label": "Instagram Content Batch Template Pack" }
+    ]
+  },
+  {
+    "id": "going-faceless",
+    "title": "Going Faceless",
+    "description": "You don't need to show your face to build a six-figure brand online. This module is a complete guide to creating a profitable, anonymous digital business using voiceovers, text-based content, stock footage, and PLR products. You'll learn which platforms reward faceless content most and how to scale an audience without ever stepping in front of a camera.",
+    "actionItems": [
+      "Choose your faceless content style — text overlay, voiceover, or AI narration — and create your first three posts",
+      "Set up a stock media library with at least 20 royalty-free videos and images in your niche",
+      "Design a faceless brand identity with a logo, color scheme, and visual theme that doesn't rely on a personal photo"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Faceless Brand Setup Guide" },
+      { "type": "Canva Template", "label": "Faceless Content Template Collection" }
+    ]
+  },
+  {
+    "id": "multi-platform-mastery",
+    "title": "Multi Platform Mastery",
+    "description": "Relying on a single platform is a business risk — algorithms change, accounts get suspended, and audiences migrate. This module teaches you how to build a presence across multiple platforms without burning out, using a hub-and-spoke content system that lets you create once and distribute everywhere. You'll learn the nuances of each platform so your content resonates no matter where it lands.",
+    "actionItems": [
+      "Identify your primary platform (where your ideal audience lives) and two secondary distribution channels",
+      "Create a repurposing SOP that outlines how each piece of content gets adapted for each platform",
+      "Set up auto-posting or scheduling tools to distribute content without manually posting to every platform"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Multi-Platform Distribution Strategy" },
+      { "type": "Canva Template", "label": "Platform-Specific Sizing & Format Guide" }
+    ]
+  },
+  {
+    "id": "navigating-stan-store",
+    "title": "Navigating Stan.store",
+    "description": "Stan.store is the all-in-one link-in-bio platform built specifically for creators who want to sell digital products without a complex funnel. This module walks you through setting up your Stan store from scratch — from uploading your first product to connecting your payment processor and customizing your storefront to match your brand. You'll have a live, functional digital store ready before the module ends.",
+    "actionItems": [
+      "Create your Stan.store account, upload your first digital product, and set your price point",
+      "Customize your storefront with your brand colors, logo, and a compelling headline that speaks to your audience's desired outcome",
+      "Add your Stan.store link to every platform bio and create a story or post announcing your new digital storefront"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Stan.store Setup Walkthrough PDF" },
+      { "type": "Canva Template", "label": "Digital Product Mockup Templates" }
+    ]
+  },
+  {
+    "id": "plr-vault",
+    "title": "PLR Vault",
+    "description": "PLR (Private Label Rights) products allow you to sell pre-made digital content as your own, dramatically cutting your creation time and getting you to revenue faster. This module explains what PLR is, how to source high-quality PLR products, how to customize them to fit your brand, and how to price and market them for maximum profit. You'll understand exactly which PLR products sell best and why.",
+    "actionItems": [
+      "Purchase or access one high-quality PLR bundle in your niche and rebrand it with your colors, logo, and voice",
+      "List your first PLR product on your Stan.store or chosen platform with a strong sales description",
+      "Create three pieces of content that tease the value inside your PLR product to drive traffic to your store"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "PLR Sourcing & Customization Guide" },
+      { "type": "Canva Template", "label": "PLR Rebranding Template Kit" }
+    ]
+  },
+  {
+    "id": "mastering-reels",
+    "title": "Mastering Reels",
+    "description": "Reels are the highest-reach format on Instagram and Facebook, making them the most powerful free marketing tool available to digital entrepreneurs. This module covers everything from hook writing and trending audio selection to editing pacing and call-to-action placement. You'll leave with a repeatable Reels creation process that consistently drives views, follows, and sales.",
+    "actionItems": [
+      "Write 10 scroll-stopping hooks using the hook formula bank provided in this module",
+      "Create and post your first educational Reel using trending audio and the three-step value framework",
+      "Analyze your Reels analytics after seven days and identify your highest-performing format to double down on"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "100 Viral Reel Hook Formulas" },
+      { "type": "Canva Template", "label": "Reels Cover & Caption Template Pack" }
+    ]
+  },
+  {
+    "id": "email-marketing",
+    "title": "Email Marketing",
+    "description": "Your email list is the only audience you truly own — it cannot be taken away by an algorithm update or platform shutdown. This module teaches you how to build, grow, and monetize an email list from zero using lead magnets, automated sequences, and strategic broadcast campaigns. You'll discover why email converts at 10x the rate of social media and how to leverage it for consistent, predictable revenue.",
+    "actionItems": [
+      "Set up a free email marketing account (Flodesk, ConvertKit, or Mailchimp) and create your first opt-in form",
+      "Create a high-value lead magnet that solves one specific problem for your ideal audience and drives opt-ins",
+      "Write a five-part welcome sequence that builds trust, showcases your expertise, and introduces your core offer"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Email Marketing Launch Checklist" },
+      { "type": "Canva Template", "label": "Lead Magnet Design Templates" }
+    ]
+  },
+  {
+    "id": "digital-products",
+    "title": "Digital Products",
+    "description": "Digital products are the highest-margin business model that exists — you create them once and sell them infinitely with no inventory, shipping, or production costs. This module walks you through every type of digital product you can create and sell, from eBooks and templates to courses and toolkits. You'll choose the right product type for your audience and build your first sellable asset.",
+    "actionItems": [
+      "Brainstorm five digital product ideas based on your expertise and your audience's most pressing problems",
+      "Create your first digital product — an eBook, guide, or template — using the creation framework provided",
+      "Write a compelling product description and set a strategic price point using the value-based pricing formula"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Digital Product Creation Blueprint" },
+      { "type": "Canva Template", "label": "eBook & Guide Design Template" }
+    ]
+  },
+  {
+    "id": "the-content-vault",
+    "title": "The Content Vault",
+    "description": "Never run out of content ideas again. The Content Vault is a comprehensive resource of plug-and-play content frameworks, caption templates, and post ideas organized by niche and platform. This module shows you how to use, customize, and endlessly remix the vault so your content always feels fresh, strategic, and on-brand.",
+    "actionItems": [
+      "Download the content vault and sort the templates by your top two content pillars",
+      "Customize 15 captions from the vault to match your brand voice and schedule them for the next three weeks",
+      "Identify your top five performing content formats and build a recurring series around each one"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "300 Done-For-You Caption Swipe File" },
+      { "type": "Canva Template", "label": "Content Ideas Mega Template Pack" }
+    ]
+  },
+  {
+    "id": "live-recordings",
+    "title": "Live Recordings",
+    "description": "Going live is one of the most powerful ways to build trust, answer objections, and convert warm audiences into paying customers in real time. This module covers how to plan, promote, and execute high-converting live sessions across Instagram, TikTok, and Facebook — even if you've never gone live before. You'll learn the live-to-offer framework that turns a 30-minute broadcast into consistent daily sales.",
+    "actionItems": [
+      "Schedule and promote your first live session at least 48 hours in advance using three teaser posts",
+      "Prepare a simple live script with an intro, value segment, and soft pitch using the framework provided",
+      "Repurpose your live recording into at least three additional pieces of content — a Reel, a caption, and a highlight"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Live Selling Script & Outline Template" },
+      { "type": "Canva Template", "label": "Live Announcement Promo Templates" }
+    ]
+  },
+  {
+    "id": "drop-shipping",
+    "title": "Drop Shipping",
+    "description": "Dropshipping allows you to sell physical products online without ever holding inventory or handling shipping logistics. This module covers how to find winning products, set up a streamlined Shopify or similar store, and drive traffic through organic social content. You'll understand the unit economics, profit margins, and scaling strategies that separate profitable dropshippers from those who quit.",
+    "actionItems": [
+      "Research three potential dropshipping niches using the product validation criteria taught in this module",
+      "Set up a basic Shopify store and import your first five products from a vetted supplier",
+      "Create three pieces of product-focused content that demonstrate value and drive traffic to your store"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Dropshipping Product Research Guide" },
+      { "type": "Canva Template", "label": "Product Ad & Promo Design Templates" }
+    ]
+  },
+  {
+    "id": "ugc",
+    "title": "UGC",
+    "description": "User Generated Content (UGC) is one of the fastest-growing income streams for creators — brands pay anywhere from $150 to $1,500 per video for authentic, scroll-stopping content they can run as ads. This module teaches you how to build a UGC portfolio, pitch brands professionally, and land paid collaborations without a large following. You'll position yourself as the creator brands can't afford not to hire.",
+    "actionItems": [
+      "Create three UGC portfolio videos for products you already own and organize them into a digital media kit",
+      "Research 20 brands in your niche that are actively running ads and find their submission or creator contact email",
+      "Send five professionally written UGC pitches this week using the pitch template provided"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "UGC Portfolio & Pitch Guide" },
+      { "type": "Canva Template", "label": "UGC Creator Media Kit Template" }
+    ]
+  },
+  {
+    "id": "securing-brand-deals",
+    "title": "Securing Brand Deals",
+    "description": "Brand deals can turn your content into a six-figure income stream without selling a single product of your own. This module walks you through how to identify the right brand partners, craft a compelling media kit, negotiate your rate, and deliver work that keeps brands coming back for repeat campaigns. You'll learn the deal structures, rate formulas, and communication scripts that get you paid what you're worth.",
+    "actionItems": [
+      "Build a professional media kit that includes your audience demographics, engagement rate, and top-performing content examples",
+      "Research and list 15 brands whose values align with your content and who would benefit from reaching your audience",
+      "Send your first five brand outreach emails using the pitch-and-follow-up email sequence template"
+    ],
+    "resources": [
+      { "type": "Canva Template", "label": "Brand Deal Media Kit Template" },
+      { "type": "PDF Guide", "label": "Brand Partnership Rate Calculator & Negotiation Guide" }
+    ]
+  },
+  {
+    "id": "lets-talk-taxes",
+    "title": "Let's Talk Taxes",
+    "description": "Most digital entrepreneurs leave thousands of dollars on the table every year by not understanding the basics of self-employment taxes, write-offs, and business structuring. This module provides a clear, jargon-free introduction to the tax obligations of a digital business owner — including what to track, when to pay, and which deductions you're likely missing. You'll operate like a real business, not a hobbyist.",
+    "actionItems": [
+      "Open a separate business bank account to cleanly separate personal and business expenses",
+      "Start tracking every business expense in a simple spreadsheet organized by the IRS deduction categories covered in this module",
+      "Set aside 25-30% of every payment you receive into a tax savings account to avoid year-end surprises"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Self-Employment Tax Basics Guide" },
+      { "type": "PDF Guide", "label": "Business Deductions Checklist for Digital Entrepreneurs" }
+    ]
+  },
+  {
+    "id": "creating-on-canva",
+    "title": "Creating on Canva",
+    "description": "Canva is the design tool of choice for digital entrepreneurs at every level, and mastering it gives you the ability to create professional, brand-consistent graphics in minutes. This module is a comprehensive Canva deep-dive covering templates, brand kits, Canva Pro features, and workflow shortcuts that 10x your creative output. You'll never need to outsource design again.",
+    "actionItems": [
+      "Set up your Canva Brand Kit with your logo, brand colors, and fonts so every design is auto-branded",
+      "Create five core design templates for your most common content formats — Reels cover, carousel, story, email header, and product mockup",
+      "Design one complete lead magnet or digital product using Canva's document or presentation feature"
+    ],
+    "resources": [
+      { "type": "Canva Template", "label": "Ultimate Canva Starter Template Pack" },
+      { "type": "PDF Guide", "label": "Canva Pro Tips & Shortcuts Guide" }
+    ]
+  },
+  {
+    "id": "apps-for-visuals",
+    "title": "APPS for Visuals",
+    "description": "The apps you use determine the quality and consistency of your visual content. This module reviews the top mobile and desktop tools for creating high-quality photos, videos, graphics, and animations — many of them completely free. You'll build a curated toolkit customized to your content style and niche so every post looks intentional and professional.",
+    "actionItems": [
+      "Download and explore three apps from the recommended visual toolkit and create one test post with each",
+      "Build a photo editing preset in Lightroom or VSCO that becomes your consistent visual filter across all content",
+      "Organize your apps into a content creation workflow — shoot, edit, design, caption — to streamline your process"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Top 25 Visual Creation Apps for Digital Creators" },
+      { "type": "Canva Template", "label": "Photo Grid & Aesthetic Mood Board Template" }
+    ]
+  },
+  {
+    "id": "tiktok-mastery",
+    "title": "TikTok Mastery",
+    "description": "TikTok's algorithm is the most generous on the internet — it can push a brand-new account's video to millions of people overnight. This module teaches you the platform-specific strategies that drive explosive organic growth, from trend hijacking and niche hashtag strategy to the optimal posting frequency and video structure for maximum reach. You'll understand TikTok the way the top creators do.",
+    "actionItems": [
+      "Optimize your TikTok profile with a keyword-rich bio, profile video, and pinned content strategy",
+      "Research and participate in one trending audio or challenge in your niche this week",
+      "Post one TikTok every day for seven days using the content formats taught in this module and analyze what performs best"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "TikTok Algorithm & Growth Playbook" },
+      { "type": "Canva Template", "label": "TikTok Content Planning Calendar" }
+    ]
+  },
+  {
+    "id": "tiktok-lives",
+    "title": "TikTok Lives",
+    "description": "TikTok Lives are a massive revenue opportunity that most creators drastically underutilize. Between TikTok gifts, live shopping integrations, and direct audience engagement that converts followers into buyers in real time, live streaming on TikTok is one of the highest-ROI activities a digital entrepreneur can do. This module covers the setup, promotion, content structure, and monetization strategies for profitable TikTok Lives.",
+    "actionItems": [
+      "Schedule your first TikTok Live and promote it with a countdown post and story 24 hours in advance",
+      "Prepare a live outline with a clear opening hook, value segment, engagement prompts, and a soft close with a CTA",
+      "Go live for a minimum of 30 minutes to maximize algorithm favor and reach a new segment of your followers"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "TikTok Live Monetization Guide" },
+      { "type": "Canva Template", "label": "TikTok Live Announcement Graphic Templates" }
+    ]
+  },
+  {
+    "id": "tiktok-shop-level-up",
+    "title": "TikTok Shop Level Up",
+    "description": "TikTok Shop has changed the commerce game, allowing creators to earn commissions on products sold directly through their videos and lives without any upfront investment. This module shows you how to set up your TikTok Shop affiliate account, find winning products in your niche, create content that drives direct purchases, and scale to consistent daily commissions. This is one of the fastest paths to passive daily income available in 2025.",
+    "actionItems": [
+      "Apply for and set up your TikTok Shop affiliate account and complete your seller or affiliate profile",
+      "Research five high-commission, high-demand products in your niche using TikTok Shop's product marketplace",
+      "Create three product review or demonstration videos this week designed to drive direct TikTok Shop purchases"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "TikTok Shop Affiliate Setup & Strategy Guide" },
+      { "type": "Canva Template", "label": "TikTok Product Review Video Script Templates" }
+    ]
+  },
+  {
+    "id": "selling-on-etsy",
+    "title": "Selling on Etsy",
+    "description": "Etsy is one of the most trafficked digital marketplaces in the world and a goldmine for digital product sellers. This module covers how to set up a profitable Etsy shop, write SEO-optimized listings that rank in search, design compelling product thumbnails, and build a five-star review reputation that compounds your sales. You'll turn Etsy into a fully automated passive income stream.",
+    "actionItems": [
+      "Open your Etsy shop and complete all profile, banner, and shop policy sections to build buyer trust",
+      "Create and list your first three digital products with keyword-optimized titles, tags, and descriptions",
+      "Set up an automatic thank-you message and upsell sequence for new Etsy customers"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Etsy SEO & Listing Optimization Guide" },
+      { "type": "Canva Template", "label": "Etsy Product Thumbnail & Mock-up Templates" }
+    ]
+  },
+  {
+    "id": "selling-on-pinterest",
+    "title": "Selling on Pinterest",
+    "description": "Pinterest is a visual search engine with 450+ million monthly users who are actively looking to discover and buy. This module teaches you how to use Pinterest as a powerful traffic and sales driver for your digital products, affiliate links, and blog or website. You'll learn keyword strategy, Pin design best practices, board optimization, and scheduling systems that drive consistent, evergreen traffic for months after posting.",
+    "actionItems": [
+      "Convert your Pinterest account to a business account and complete your profile optimization with keywords",
+      "Create five SEO-optimized boards aligned with your niche content pillars and populate each with 10 pins",
+      "Design and schedule 10 fresh pins per week using a tool like Tailwind to maximize your reach on the platform"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Pinterest SEO & Traffic Strategy Guide" },
+      { "type": "Canva Template", "label": "Pinterest Pin Design Template Pack" }
+    ]
+  },
+  {
+    "id": "branding-essentials",
+    "title": "Branding Essentials",
+    "description": "This module is the advanced deep-dive into brand building for the creator who is ready to move from casual to professional. You'll develop your brand architecture — including positioning statement, target avatar, brand promise, and visual standards — so every piece of content and every product feels like it belongs to a premium, cohesive brand. Clients pay more when they feel like they're buying from a real brand.",
+    "actionItems": [
+      "Write a one-sentence brand positioning statement: 'I help [who] achieve [what] without [pain point]'",
+      "Create a detailed customer avatar document including demographics, psychographics, goals, and biggest frustrations",
+      "Design a complete brand standards one-pager with your logo, fonts, colors, and do/don't visual examples"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Brand Positioning & Avatar Workbook" },
+      { "type": "Canva Template", "label": "Brand Standards One-Pager Template" }
+    ]
+  },
+  {
+    "id": "faceless-plr",
+    "title": "Faceless PLR",
+    "description": "Combining the power of faceless content with the efficiency of PLR products creates one of the most scalable and low-effort income models available. This module shows you how to source, rebrand, and sell PLR products through anonymous accounts across multiple platforms — without ever showing your face or creating original content from scratch. This is the ultimate leverage play for the introvert entrepreneur.",
+    "actionItems": [
+      "Source one premium PLR bundle designed for faceless content and customize it with a new brand name and visual identity",
+      "Create a faceless account on one platform dedicated to promoting and selling your PLR product",
+      "Develop a content plan with 30 faceless posts that drive traffic to your PLR product sales page"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Faceless PLR Business Setup Guide" },
+      { "type": "Canva Template", "label": "Faceless Account Branding Template Kit" }
+    ]
+  },
+  {
+    "id": "selling-in-stories",
+    "title": "Selling in Stories",
+    "description": "Instagram and Facebook Stories have an average open rate of 6-7% — far higher than email — making them one of the most underutilized selling tools available. This module teaches you how to create story sequences that build anticipation, overcome objections, and drive direct sales through DMs and link clicks. You'll master the art of the story funnel that converts warm followers daily.",
+    "actionItems": [
+      "Create a five-frame story sequence using the Problem-Empathy-Solution-Proof-CTA structure",
+      "Post daily stories for seven days using the engagement prompts taught in this module (poll, question, slider)",
+      "Set up a story highlight that functions as a 24/7 mini sales funnel for your core offer"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Story Selling Sequence Framework" },
+      { "type": "Canva Template", "label": "Story Slide Template Collection" }
+    ]
+  },
+  {
+    "id": "sales-mastery",
+    "title": "Sales Mastery",
+    "description": "Sales mastery is the skill that separates the creators who consistently hit income goals from those who plateau. This advanced module covers the full sales ecosystem — from attracting warm leads through content to closing through DMs, email, and calls — with scripts, frameworks, and psychological principles that make selling feel natural and ethical. You'll develop the confidence and competence to sell at any price point.",
+    "actionItems": [
+      "Map your complete sales funnel from first content touchpoint to final purchase and identify any gaps or friction points",
+      "Role-play or write out responses to the 10 most common sales objections using the framework from this module",
+      "Run a 72-hour promotional campaign using the launch sequence template and document your conversion rate"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Complete Sales Funnel Blueprint" },
+      { "type": "PDF Guide", "label": "DM Sales Script Swipe File" }
+    ]
+  },
+  {
+    "id": "amazon-reviews",
+    "title": "Amazon Reviews",
+    "description": "The Amazon Influencer Program pays creators to submit video reviews of products they already own, and those videos can earn passive commissions for years after they're published. This module covers how to qualify for the program, optimize your video reviews for maximum visibility on Amazon product pages, and build a library of reviews that generate consistent monthly income. This is one of the most passive income streams available to any creator.",
+    "actionItems": [
+      "Apply for the Amazon Influencer Program and set up your storefront page with a professional bio and organized collections",
+      "Film and upload your first five product review videos using the review framework that maximizes watch time and helpfulness scores",
+      "Build a system to review five new products per week until you have a library of 50+ earning videos"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Amazon Influencer Program Setup Guide" },
+      { "type": "PDF Guide", "label": "Product Review Script Framework" }
+    ]
+  },
+  {
+    "id": "affiliate-marketing",
+    "title": "Affiliate Marketing",
+    "description": "Advanced affiliate marketing goes far beyond pasting links in bios — it's a strategic system of content, trust-building, and audience matching that can generate five figures per month in commissions. This deep-dive module covers high-ticket affiliate programs, content-driven affiliate funnels, email-based affiliate campaigns, and the advanced tracking and optimization techniques that turn a hobby into a business. You'll treat affiliate marketing as an independent business, not a side hustle.",
+    "actionItems": [
+      "Apply to one high-ticket affiliate program (paying $100+ per conversion) in your niche",
+      "Build a dedicated affiliate content series — a playlist, highlight, or blog post — that educates and converts around one product",
+      "Set up an affiliate-focused email sequence for subscribers that delivers value and naturally integrates affiliate recommendations"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "High-Ticket Affiliate Programs Directory" },
+      { "type": "Canva Template", "label": "Affiliate Content Series Planner" }
+    ]
+  },
+  {
+    "id": "print-on-demand",
+    "title": "Print on Demand",
+    "description": "Print on demand allows you to sell custom-designed physical products — t-shirts, mugs, hoodies, phone cases, and more — without any upfront inventory investment. This module walks you through choosing a POD platform (Printful, Printify, or Gelato), designing products that sell, and driving traffic through social content and marketplace search. You'll build a branded product line that earns passively every time someone clicks buy.",
+    "actionItems": [
+      "Set up your account on one print-on-demand platform and integrate it with your Etsy shop or personal website",
+      "Design five products using your brand aesthetic and test them with a small audience before scaling",
+      "Create three pieces of social content showcasing your POD products — lifestyle mockups, unboxing, or review style"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Print on Demand Platform Comparison Guide" },
+      { "type": "Canva Template", "label": "POD Product Mockup Design Templates" }
+    ]
+  },
+  {
+    "id": "theme-pages",
+    "title": "Theme Pages",
+    "description": "Theme pages are niche-specific accounts that curate and re-share content around a specific topic — travel, quotes, fitness, pets, food — and can grow to hundreds of thousands of followers rapidly without ever creating original content. This module teaches you how to build, grow, and monetize a theme page through shoutouts, affiliate links, sponsorships, and digital product sales. It's one of the most scalable faceless business models available.",
+    "actionItems": [
+      "Choose a theme page niche with high engagement potential and low creator-to-audience competition",
+      "Set up your theme page with a polished bio, aesthetic highlights, and a consistent visual style",
+      "Begin curating and posting five pieces of high-engagement content daily and track follower growth weekly"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Theme Page Growth & Monetization Guide" },
+      { "type": "Canva Template", "label": "Theme Page Visual Identity Templates" }
+    ]
+  },
+  {
+    "id": "website-flipping",
+    "title": "Website Flipping",
+    "description": "Website flipping — buying underperforming websites, improving them, and selling them for profit — is a sophisticated income stream with incredible ROI potential. This module explains how to evaluate website value, identify acquisition opportunities on Flippa and Empire Flippers, implement quick improvement strategies, and sell for multiples of what you paid. Even a small improvement in traffic or revenue dramatically increases a site's sale price.",
+    "actionItems": [
+      "Create accounts on Flippa and Empire Flippers and spend two hours browsing listings to understand pricing and metrics",
+      "Analyze three current listings using the valuation framework taught in this module to practice identifying opportunity",
+      "Research one niche where you could build a simple content site from scratch and flip it within six months"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Website Flipping Valuation & Due Diligence Guide" },
+      { "type": "PDF Guide", "label": "Quick Website Improvement Checklist" }
+    ]
+  },
+  {
+    "id": "coach-masters",
+    "title": "Coach Masters",
+    "description": "Coaching is one of the highest-income-per-hour opportunities available to digital entrepreneurs — and you don't need a certification to start. This module walks you through packaging your knowledge and experience into a premium coaching offer, setting your rates, onboarding clients, and delivering transformative results that generate referrals and testimonials. You'll launch your coaching offer before this module ends.",
+    "actionItems": [
+      "Define your coaching niche and write a clear offer description: who you help, what result they get, and how you deliver it",
+      "Set your coaching price point using the value-based pricing formula and create a simple intake form for new clients",
+      "Reach out to five potential coaching clients via DM using the warm outreach script provided in this module"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Coaching Offer Design & Pricing Guide" },
+      { "type": "Canva Template", "label": "Coaching Program Proposal Template" }
+    ]
+  },
+  {
+    "id": "creating-your-course",
+    "title": "Creating Your Course",
+    "description": "Your knowledge and experience are worth more than you realize — and packaging them into a structured online course unlocks a scalable, premium income stream that can generate revenue indefinitely. This module covers every stage of course creation: from choosing your topic and outlining your curriculum to recording your content and delivering it through a platform like Kajabi, Teachable, or Stan.store. You'll leave with a launch-ready course framework.",
+    "actionItems": [
+      "Choose your course topic based on the intersection of your expertise, your audience's desires, and validated market demand",
+      "Outline your course modules using the learning arc framework — problem, concept, application, result — for each section",
+      "Record your first module using your phone or laptop and upload it to your chosen course platform to test the full delivery experience"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Online Course Creation Blueprint" },
+      { "type": "Canva Template", "label": "Course Curriculum Outline Workbook" }
+    ]
+  },
+  {
+    "id": "airbnb",
+    "title": "Airbnb",
+    "description": "The Airbnb opportunity goes far beyond owning property — through co-hosting, rental arbitrage, and experience hosting, you can build a significant Airbnb income stream without a real estate investment. This module covers the different entry points into the Airbnb business model, how to create listings that dominate search, and the automation tools that make managing multiple properties a passive operation. Real estate income meets digital leverage.",
+    "actionItems": [
+      "Research the co-hosting or arbitrage model in your local market and identify three properties that could be viable opportunities",
+      "Create a fully optimized Airbnb listing draft with professional photography tips, keyword-rich descriptions, and competitive pricing",
+      "Set up a basic automation stack for guest messaging, check-in instructions, and review requests"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Airbnb Arbitrage & Co-Hosting Starter Guide" },
+      { "type": "Canva Template", "label": "Airbnb Welcome Book & Guest Guide Template" }
+    ]
+  },
+  {
+    "id": "art-of-reselling",
+    "title": "Art of Reselling",
+    "description": "Reselling is the art of buying items below market value and selling them at a profit through platforms like eBay, Poshmark, Mercari, Facebook Marketplace, and Depop. This module teaches you how to source inventory effectively — from thrift stores and garage sales to liquidation pallets — and how to list, price, and ship products efficiently. Many resellers generate $3,000 to $10,000 per month flipping everyday items.",
+    "actionItems": [
+      "Spend two hours at a thrift store or online sourcing site practicing product evaluation using the resell criteria taught in this module",
+      "List your first three items on eBay or Facebook Marketplace with optimized photos, titles, and pricing",
+      "Create a simple inventory tracking system to monitor what you paid, what you listed it for, and your profit per item"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Reselling Sourcing & Pricing Strategy Guide" },
+      { "type": "Canva Template", "label": "Inventory Tracker Spreadsheet Template" }
+    ]
+  },
+  {
+    "id": "monetizing-fb",
+    "title": "Monetizing FB",
+    "description": "Facebook is often overlooked by younger creators, but it remains one of the highest-earning platforms for digital entrepreneurs — especially through Facebook Groups, Facebook Reels bonuses, and the platform's robust marketplace. This module covers the multiple monetization pathways Facebook offers, from in-stream ads and Stars to group-based product launches and Facebook Shop integrations. You'll unlock revenue streams most creators don't even know exist.",
+    "actionItems": [
+      "Apply for Facebook's monetization features (Stars, in-stream ads, Reels bonuses) and ensure your account meets all eligibility requirements",
+      "Create or revive a Facebook Group in your niche and implement a weekly engagement strategy to grow and monetize it",
+      "Cross-post your best Instagram Reels content to Facebook Reels to capture the bonus program earnings with zero extra effort"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Facebook Monetization Eligibility & Setup Guide" },
+      { "type": "PDF Guide", "label": "Facebook Group Growth & Monetization Playbook" }
+    ]
+  },
+  {
+    "id": "monetizing-reels",
+    "title": "Monetizing Reels",
+    "description": "Instagram and Facebook pay creators directly through their Reels bonus programs, creating a powerful opportunity to earn just for posting content you're already making. This module covers every platform's Reels monetization structure, the eligibility requirements, and the content strategies that maximize your bonus earnings. Combined with affiliate links and product promotions, your Reels can become a multi-layered income engine.",
+    "actionItems": [
+      "Check your eligibility for the Instagram Reels bonus program and opt in through your professional account settings",
+      "Analyze your top five performing Reels and identify the format, topic, and length that earned the most plays",
+      "Post daily Reels for 21 days using the engagement-optimized format that maximizes both algorithmic reach and bonus earnings"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Reels Monetization & Bonus Program Guide" },
+      { "type": "Canva Template", "label": "Reels Analytics Tracking Template" }
+    ]
+  },
+  {
+    "id": "podcast-setup",
+    "title": "Podcast Setup",
+    "description": "Podcasting builds deep, intimate audience relationships that no other medium can replicate — listeners spend 30 to 60 minutes with you at a time, building trust at an accelerated rate. This module walks you through everything needed to launch a professional podcast on a budget: equipment selection, recording and editing software, hosting platform setup, and distribution to Spotify and Apple Podcasts. You'll publish your first episode before the module ends.",
+    "actionItems": [
+      "Choose your podcast name, niche, and format (solo, interview, co-host) and register your show on a hosting platform like Buzzsprout or Anchor",
+      "Record, edit, and publish your first episode using the episode structure template provided — intro, value content, outro with CTA",
+      "Create podcast artwork and promotional graphics and share your first episode across all your social platforms"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Podcast Launch Checklist & Equipment Guide" },
+      { "type": "Canva Template", "label": "Podcast Cover Art & Promo Graphic Templates" }
+    ]
+  },
+  {
+    "id": "threads-mastery",
+    "title": "Threads Mastery",
+    "description": "Threads is Meta's fastest-growing platform and currently the most underutilized opportunity for building an engaged, text-first community that converts to buyers. This module covers the unique content format that performs on Threads, how to grow quickly in the platform's early stage, and how to drive that audience toward your products and other platforms. Early movers on Threads are seeing explosive organic reach that rivals early TikTok growth.",
+    "actionItems": [
+      "Optimize your Threads profile and post your first 10 threads using the high-engagement formats covered in this module",
+      "Engage with 20 creators in your niche on Threads daily for two weeks to rapidly grow your following organically",
+      "Create a Threads-to-offer funnel — value thread, soft pitch thread, DM invitation — and deploy it twice per week"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Threads Growth Strategy & Content Guide" },
+      { "type": "Canva Template", "label": "Threads Content Planning Template" }
+    ]
+  },
+  {
+    "id": "network-marketing",
+    "title": "Network Marketing",
+    "description": "Network marketing — done ethically and strategically — can create significant residual income through team building and product sales. This module separates the myths from the reality, covering how to evaluate a legitimate opportunity, build a genuine customer base first, and leverage social media to grow a team without spamming your friends and family. You'll learn the difference between building a business and chasing a trend.",
+    "actionItems": [
+      "Evaluate your current or prospective network marketing company using the due diligence checklist provided",
+      "Create a content strategy that leads with the product's value rather than the business opportunity to build trust first",
+      "Identify five potential partners based on alignment of values, not just willingness, and have genuine conversations about the opportunity"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Network Marketing Due Diligence Checklist" },
+      { "type": "PDF Guide", "label": "Ethical Recruiting & Team Building Guide" }
+    ]
+  },
+  {
+    "id": "pinterest-sales",
+    "title": "Pinterest Sales",
+    "description": "Pinterest is not a social media platform — it's a visual search engine where buyers go to find solutions, which makes it the highest-intent traffic source available to digital product sellers. This module goes beyond basic Pinterest strategy to cover advanced techniques like Rich Pins, buyable pins, Pinterest ads, and SEO-driven traffic funnels that drive consistent daily sales from evergreen content. You'll turn Pinterest into your most reliable passive traffic source.",
+    "actionItems": [
+      "Set up Rich Pins for your website or product store and verify your domain with Pinterest Business",
+      "Create a Pinterest sales funnel: traffic pin → lead magnet landing page → email sequence → product offer",
+      "Run a $5/day Pinterest ad campaign for seven days to test paid traffic to your highest-converting digital product"
+    ],
+    "resources": [
+      { "type": "PDF Guide", "label": "Pinterest Sales Funnel Blueprint" },
+      { "type": "Canva Template", "label": "Pinterest Ad & Sales Pin Template Pack" }
+    ]
+  }
+]
