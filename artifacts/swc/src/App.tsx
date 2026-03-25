@@ -10,6 +10,7 @@ import NotFound from "@/pages/not-found";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { InstallBanner } from "./components/InstallBanner";
+import { PWASetup } from "./components/PWASetup";
 import Home from "./pages/Home";
 import Curriculum from "./pages/Curriculum";
 import Vault from "./pages/Vault";
@@ -57,6 +58,7 @@ function App() {
         </WouterRouter>
         <Toaster />
         <InstallBanner />
+        <PWASetup />
       </TooltipProvider>
     </QueryClientProvider>
   );

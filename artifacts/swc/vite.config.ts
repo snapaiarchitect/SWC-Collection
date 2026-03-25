@@ -52,7 +52,7 @@ export default defineConfig({
         orientation: "portrait-primary",
         icons: [
           {
-            src: "icons/icon-512.png",
+            src: "icons/icon-192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any",
@@ -73,8 +73,18 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg,woff,woff2}"],
-        navigateFallback: null,
+        navigateFallback: "index.html",
+        navigateFallbackDenylist: [/^\/api\//],
         runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.mode === "navigate",
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "swc-navigation",
+              networkTimeoutSeconds: 3,
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
             handler: "CacheFirst",
