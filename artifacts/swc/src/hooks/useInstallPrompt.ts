@@ -55,5 +55,5 @@ export function useInstallPrompt() {
   const canInstall = !dismissed && !isInstalled && !!deferredPrompt;
   const showIOSHint = !dismissed && !isInstalled && isIOS && !deferredPrompt;
 
-  return { canInstall, showIOSHint, promptInstall, dismiss, isInstalled };
+  return { canInstall, showIOSHint, isIOS, promptInstall, dismiss, isInstalled };
 }
