@@ -1,11 +1,12 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import { ArrowLeft, CheckCircle2, Lock } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Lock, Award, Download } from "lucide-react";
 import { PageTransition } from "@/components/PageTransition";
 import { LessonView } from "@/components/LessonView";
-import { curriculumModules } from "@/data/curriculumData";
-
-const STORAGE_KEY = "swc_completed_modules";
+import { curriculumModules, phases } from "@/data/curriculumData";
+import type { PhaseId } from "@/data/curriculumData";
+import { useProgress } from "@/hooks/useProgress";
+import confetti from "canvas-confetti";
 
 const INCOME_STREAMS = [
   "Affiliate Marketing", "Master Resell Rights", "PLR Products", "Drop Shipping",
@@ -15,43 +16,24 @@ const INCOME_STREAMS = [
   "Podcast Scaling", "Threads Mastery"
 ];
 
-function loadCompleted(): Set<number> {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return new Set();
-    const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) return new Set<number>(parsed);
-  } catch {}
-  return new Set();
-}
-
-function saveCompleted(ids: Set<number>) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids]));
-}
-
 export default function Curriculum() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [completed, setCompleted] = useState<Set<number>>(loadCompleted);
+  const [activePhase, setActivePhase] = useState<PhaseId | "all">("all");
+  const [confettiFired, setConfettiFired] = useState(false);
+  const [phaseVisible, setPhaseVisible] = useState(true);
 
-  useEffect(() => {
-    saveCompleted(completed);
-  }, [completed]);
-
-  const markComplete = useCallback((id: number) => {
-    setCompleted((prev) => {
-      const next = new Set(prev);
-      next.add(id);
-      return next;
-    });
-  }, []);
+  const {
+    isComplete,
+    markComplete,
+    isPhaseComplete,
+    completedCount,
+    totalCount,
+    progressPct,
+  } = useProgress();
 
   const selectedModule = selectedId !== null
     ? curriculumModules.find((m) => m.id === selectedId) ?? null
     : null;
-
-  const completedCount = completed.size;
-  const totalCount = curriculumModules.length;
-  const progressPct = Math.round((completedCount / totalCount) * 100);
 
   const handlePrev = () => {
     if (selectedId && selectedId > 1) setSelectedId(selectedId - 1);
@@ -59,6 +41,47 @@ export default function Curriculum() {
   const handleNext = () => {
     if (selectedId && selectedId < totalCount) setSelectedId(selectedId + 1);
   };
+
+  const handlePhaseChange = (phase: PhaseId | "all") => {
+    setPhaseVisible(false);
+    setTimeout(() => {
+      setActivePhase(phase);
+      setPhaseVisible(true);
+    }, 180);
+  };
+
+  const displayedModules = activePhase === "all"
+    ? curriculumModules
+    : curriculumModules.filter((m) => m.phase === activePhase);
+
+  useEffect(() => {
+    if (completedCount === totalCount && totalCount > 0 && !confettiFired) {
+      setConfettiFired(true);
+      const duration = 3000;
+      const end = Date.now() + duration;
+      const colors = ["#C5A059", "#b47d2e", "#F5F2ED", "#1A1A1A"];
+      const frame = () => {
+        confetti({
+          particleCount: 4,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0, y: 0.65 },
+          colors,
+        });
+        confetti({
+          particleCount: 4,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1, y: 0.65 },
+          colors,
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      };
+      frame();
+    }
+  }, [completedCount, totalCount, confettiFired]);
 
   return (
     <PageTransition>
@@ -68,8 +91,11 @@ export default function Curriculum() {
           <span className="text-[9px] uppercase tracking-widest font-bold opacity-40">
             Course Progress
           </span>
-          <span className="text-[9px] uppercase tracking-widest font-bold" style={{ color: completedCount > 0 ? "#b47d2e" : undefined, opacity: completedCount > 0 ? 1 : 0.4 }}>
-            {completedCount} / {totalCount} modules — {progressPct}%
+          <span
+            className="text-[9px] uppercase tracking-widest font-bold"
+            style={{ color: completedCount > 0 ? "#b47d2e" : undefined, opacity: completedCount > 0 ? 1 : 0.4 }}
+          >
+            {completedCount} / {totalCount} — {progressPct}% Complete
           </span>
         </div>
         <div className="w-full h-1 bg-foreground/8 rounded-full overflow-hidden">
@@ -90,7 +116,7 @@ export default function Curriculum() {
         <LessonView
           module={selectedModule}
           totalModules={totalCount}
-          isCompleted={completed.has(selectedModule.id)}
+          isCompleted={isComplete(selectedModule.id)}
           onMarkComplete={markComplete}
           onPrev={handlePrev}
           onNext={handleNext}
@@ -106,15 +132,35 @@ export default function Curriculum() {
             Back to Home
           </Link>
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl mb-4 italic text-foreground/90">The Roadmap</h2>
             <p className="uppercase tracking-[0.3em] text-[10px] font-semibold opacity-50">
               Everything you need to scale
             </p>
-            {completedCount > 0 && (
+            {completedCount > 0 && completedCount < totalCount && (
               <p className="mt-3 text-[9px] uppercase tracking-widest font-bold" style={{ color: "#b47d2e" }}>
-                {progressPct}% complete — keep going 🏆
+                {progressPct}% complete — keep going
               </p>
+            )}
+            {completedCount === totalCount && totalCount > 0 && (
+              <div className="mt-6 flex flex-col items-center gap-4">
+                <p className="text-[9px] uppercase tracking-widest font-bold" style={{ color: "#b47d2e" }}>
+                  🏆 Course Complete — You did it!
+                </p>
+                <a
+                  href="data:text/plain;charset=utf-8,SWC%202.0%20%7C%20Certificate%20of%20Completion%0A%0AThis%20certifies%20that%20you%20have%20successfully%20completed%20all%2056%20modules%20of%20the%20SWC%202.0%20Masterclass.%0A%0ACongratulations%20on%20your%20achievement."
+                  download="SWC-2.0-Certificate.txt"
+                  className="flex items-center gap-2 px-8 py-3 text-[10px] uppercase tracking-widest font-bold rounded-sm transition-all duration-300 hover:opacity-80"
+                  style={{
+                    backgroundColor: "#C5A059",
+                    color: "#F5F2ED",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download Certificate
+                </a>
+              </div>
             )}
           </div>
 
@@ -143,9 +189,64 @@ export default function Curriculum() {
             <p className="text-[9px] uppercase tracking-widest opacity-40 mb-8">
               Click any module to open the lesson
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2">
-              {curriculumModules.map((module) => {
-                const isDone = completed.has(module.id);
+
+            {/* Phase Navigation */}
+            <div className="mb-8 -mx-1 flex flex-wrap gap-2">
+              <button
+                onClick={() => handlePhaseChange("all")}
+                className="px-4 py-2 text-[9px] uppercase tracking-widest font-bold rounded-sm transition-all duration-200"
+                style={{
+                  backgroundColor: activePhase === "all" ? "#1A1A1A" : "transparent",
+                  color: activePhase === "all" ? "#F5F2ED" : "#1A1A1A",
+                  border: "1px solid",
+                  borderColor: activePhase === "all" ? "#1A1A1A" : "rgba(26,26,26,0.15)",
+                  opacity: activePhase === "all" ? 1 : 0.6,
+                }}
+              >
+                All
+              </button>
+              {phases.map((phase) => {
+                const mastered = isPhaseComplete(phase.id);
+                const isActive = activePhase === phase.id;
+                return (
+                  <button
+                    key={phase.id}
+                    onClick={() => handlePhaseChange(phase.id)}
+                    className="flex items-center gap-1.5 px-4 py-2 text-[9px] uppercase tracking-widest font-bold rounded-sm transition-all duration-200"
+                    style={{
+                      backgroundColor: isActive ? "#1A1A1A" : "transparent",
+                      color: isActive ? "#F5F2ED" : "#1A1A1A",
+                      border: "1px solid",
+                      borderColor: mastered
+                        ? "rgba(197,160,89,0.5)"
+                        : isActive
+                        ? "#1A1A1A"
+                        : "rgba(26,26,26,0.15)",
+                      opacity: isActive ? 1 : 0.6,
+                    }}
+                  >
+                    {phase.label}
+                    {mastered && (
+                      <span
+                        className="flex items-center gap-0.5 text-[8px] font-bold"
+                        style={{ color: isActive ? "#C5A059" : "#b47d2e" }}
+                      >
+                        <Award className="w-3 h-3" />
+                        Phase Mastered
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Module grid with fade transition */}
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2 transition-opacity duration-200"
+              style={{ opacity: phaseVisible ? 1 : 0 }}
+            >
+              {displayedModules.map((module) => {
+                const isDone = isComplete(module.id);
                 return (
                   <button
                     key={module.id}

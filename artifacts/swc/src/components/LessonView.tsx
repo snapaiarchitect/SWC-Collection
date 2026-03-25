@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Play, CheckCircle, Circle, FileText, Zap, Clock, Check } from "lucide-react";
 import type { CurriculumModule } from "@/data/curriculumData";
 
@@ -23,6 +23,10 @@ export function LessonView({
 }: LessonViewProps) {
   const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false]);
 
+  useEffect(() => {
+    setCheckedItems([false, false, false]);
+  }, [module.id]);
+
   const toggleCheck = (index: number) => {
     const next = [...checkedItems];
     next[index] = !next[index];
@@ -40,7 +44,7 @@ export function LessonView({
           className="flex items-center gap-2 text-[9px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity"
         >
           <ArrowLeft className="w-3 h-3" />
-          Back to Roadmap
+          Back to Curriculum
         </button>
       </div>
 
@@ -55,13 +59,16 @@ export function LessonView({
             {module.duration}
           </div>
           {isCompleted && (
-            <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold text-amber-600">
+            <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold" style={{ color: "#b47d2e" }}>
               <Check className="w-3 h-3" />
               Completed
             </span>
           )}
         </div>
-        <h1 className="font-display text-3xl md:text-4xl italic mt-2 mb-1 text-foreground/90 leading-tight">
+        <h1
+          className="font-display text-3xl md:text-4xl italic mt-2 mb-1 text-foreground/90 leading-tight"
+          style={{ fontFamily: "'Bodoni Moda', serif" }}
+        >
           {module.title}
         </h1>
         <div className="w-12 h-[1px] bg-foreground/20 mt-4" />
@@ -73,10 +80,7 @@ export function LessonView({
           className="relative w-full rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg group cursor-pointer"
           style={{ aspectRatio: "16/9" }}
         >
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-foreground/10" />
-
-          {/* Decorative grid */}
           <div
             className="absolute inset-0 opacity-[0.04]"
             style={{
@@ -84,8 +88,6 @@ export function LessonView({
               backgroundSize: "40px 40px",
             }}
           />
-
-          {/* Module title watermark */}
           <div className="absolute inset-0 flex items-end p-6">
             <p
               className="font-display text-2xl md:text-3xl italic text-foreground/10 leading-tight"
@@ -94,19 +96,28 @@ export function LessonView({
               {module.title}
             </p>
           </div>
-
-          {/* Play button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-16 h-16 rounded-full bg-foreground/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
               <Play className="w-6 h-6 text-background fill-background ml-1" />
             </div>
           </div>
-
-          {/* Duration badge */}
           <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5">
             <Clock className="w-3 h-3 opacity-60" />
             <span className="text-[9px] uppercase tracking-widest font-bold opacity-60">{module.duration}</span>
           </div>
+        </div>
+      </div>
+
+      {/* TL;DR Block */}
+      <div className="px-8 py-4">
+        <div
+          className="rounded-xl p-6 border"
+          style={{ backgroundColor: "rgba(197,160,89,0.06)", borderColor: "rgba(197,160,89,0.2)" }}
+        >
+          <p className="text-[9px] uppercase tracking-[0.3em] font-bold mb-3" style={{ color: "#b47d2e" }}>
+            TL;DR
+          </p>
+          <p className="text-sm font-light leading-relaxed opacity-80">{module.tldr}</p>
         </div>
       </div>
 
@@ -124,7 +135,7 @@ export function LessonView({
           <div>
             <div className="flex items-center gap-2 mb-5">
               <Zap className="w-3.5 h-3.5 opacity-50" />
-              <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Now Do This</p>
+              <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Action Checklist</p>
             </div>
             <div className="space-y-3">
               {module.actionItems.map((item, idx) => (
@@ -139,7 +150,7 @@ export function LessonView({
                 >
                   <div className="shrink-0 mt-0.5">
                     {checkedItems[idx] ? (
-                      <CheckCircle className="w-4 h-4 text-amber-600" />
+                      <CheckCircle className="w-4 h-4" style={{ color: "#b47d2e" }} />
                     ) : (
                       <Circle className="w-4 h-4 opacity-30 group-hover:opacity-60 transition-opacity" />
                     )}
@@ -192,7 +203,7 @@ export function LessonView({
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <FileText className="w-3.5 h-3.5 opacity-50" />
-                <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Resources</p>
+                <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Resource Drawer</p>
               </div>
               <div className="space-y-3">
                 {module.resources.map((resource, idx) => (
