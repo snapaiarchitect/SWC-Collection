@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight, Play, CheckCircle, Circle, FileText, Zap, Clock, Check } from "lucide-react";
+import {
+  ArrowLeft, ArrowRight, Play, CheckCircle, Circle,
+  FileText, LayoutTemplate, CheckSquare, BookOpen,
+  Zap, Clock, Check,
+} from "lucide-react";
 import type { CurriculumModule } from "@/data/curriculumData";
 
 interface LessonViewProps {
@@ -11,6 +15,51 @@ interface LessonViewProps {
   onNext: () => void;
   onBack: () => void;
 }
+
+type ResourceType = "checklist" | "template" | "guide" | "pdf";
+
+function detectResourceType(name: string): ResourceType {
+  const lower = name.toLowerCase();
+  if (lower.includes("checklist")) return "checklist";
+  if (
+    lower.includes("template") ||
+    lower.includes("canva") ||
+    lower.includes("swipe file") ||
+    lower.includes("script") ||
+    lower.includes("sequence") ||
+    lower.includes("matrix")
+  )
+    return "template";
+  if (
+    lower.includes("guide") ||
+    lower.includes("blueprint") ||
+    lower.includes("playbook") ||
+    lower.includes("roadmap")
+  )
+    return "guide";
+  return "pdf";
+}
+
+function ResourceIcon({ type }: { type: ResourceType }) {
+  const cls = "w-3.5 h-3.5 opacity-60";
+  switch (type) {
+    case "checklist":
+      return <CheckSquare className={cls} />;
+    case "template":
+      return <LayoutTemplate className={cls} />;
+    case "guide":
+      return <BookOpen className={cls} />;
+    default:
+      return <FileText className={cls} />;
+  }
+}
+
+const TYPE_LABELS: Record<ResourceType, string> = {
+  checklist: "Action Checklist",
+  template: "Template / Canva",
+  guide: "Strategy Guide",
+  pdf: "Download PDF",
+};
 
 export function LessonView({
   module,
@@ -38,10 +87,10 @@ export function LessonView({
   return (
     <div className="min-h-screen" style={{ fontFamily: "'Montserrat', sans-serif" }}>
       {/* Back button */}
-      <div className="px-8 pt-10 pb-4">
+      <div className="px-4 md:px-8 pt-10 pb-4">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-[9px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity"
+          className="flex items-center gap-2 text-[9px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity min-h-[44px]"
         >
           <ArrowLeft className="w-3 h-3" />
           Back to Curriculum
@@ -49,7 +98,7 @@ export function LessonView({
       </div>
 
       {/* Module badge */}
-      <div className="px-8 pb-4">
+      <div className="px-4 md:px-8 pb-4">
         <div className="flex items-center gap-3">
           <span className="font-display text-xs italic opacity-20">
             {String(module.id).padStart(2, "0")}
@@ -75,7 +124,7 @@ export function LessonView({
       </div>
 
       {/* 16:9 Video Placeholder */}
-      <div className="px-8 py-4">
+      <div className="px-4 md:px-8 py-4">
         <div
           className="relative w-full rounded-2xl overflow-hidden bg-foreground/5 border border-foreground/10 shadow-lg group cursor-pointer"
           style={{ aspectRatio: "16/9" }}
@@ -109,7 +158,7 @@ export function LessonView({
       </div>
 
       {/* TL;DR Block */}
-      <div className="px-8 py-4">
+      <div className="px-4 md:px-8 py-4">
         <div
           className="rounded-xl p-6 border"
           style={{ backgroundColor: "rgba(197,160,89,0.06)", borderColor: "rgba(197,160,89,0.2)" }}
@@ -121,10 +170,54 @@ export function LessonView({
         </div>
       </div>
 
-      {/* Main content: description + sidebar */}
-      <div className="px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* LEFT: Description + Action Items */}
-        <div className="md:col-span-2 space-y-8">
+      {/* Main content: description + sidebar — flex on mobile, grid on md+ */}
+      <div className="px-4 md:px-8 py-6 flex flex-col md:grid md:grid-cols-3 gap-8">
+
+        {/* RIGHT: Resources sidebar — order-first on mobile, order-last on desktop */}
+        <div className="order-first md:order-last md:col-span-1">
+          <div className="md:sticky md:top-24 space-y-4">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <FileText className="w-3.5 h-3.5 opacity-50" />
+                <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">
+                  Resources for this lesson
+                </p>
+              </div>
+              <div className="space-y-3">
+                {module.resources.map((resource, idx) => {
+                  const type = detectResourceType(resource);
+                  return (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 p-4 rounded-xl border border-foreground/8 bg-muted hover:border-foreground/20 transition-colors cursor-pointer group"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center shrink-0 group-hover:bg-foreground/15 transition-colors">
+                        <ResourceIcon type={type} />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold leading-snug opacity-80">{resource}</p>
+                        <p className="text-[8px] uppercase tracking-widest opacity-30 mt-0.5">
+                          {TYPE_LABELS[type]}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Module progress indicator */}
+            <div className="mt-6 p-4 rounded-xl border border-foreground/8 bg-muted">
+              <p className="text-[9px] uppercase tracking-widest font-bold opacity-30 mb-2">Module</p>
+              <p className="text-[10px] font-light opacity-60">
+                <span className="font-bold opacity-100">{module.id}</span> of {totalModules}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* LEFT: Description + Action Items — order-last on mobile, order-first on desktop */}
+        <div className="order-last md:order-first md:col-span-2 space-y-8">
           {/* Mastery Description */}
           <div>
             <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40 mb-4">What You'll Master</p>
@@ -142,7 +235,7 @@ export function LessonView({
                 <button
                   key={idx}
                   onClick={() => toggleCheck(idx)}
-                  className="w-full flex items-start gap-4 text-left group p-4 rounded-xl border transition-all duration-200 hover:border-foreground/20"
+                  className="w-full flex items-start gap-4 text-left group p-4 rounded-xl border transition-all duration-200 hover:border-foreground/20 min-h-[56px]"
                   style={{
                     borderColor: checkedItems[idx] ? "rgba(180,140,60,0.3)" : "rgba(26,26,26,0.08)",
                     backgroundColor: checkedItems[idx] ? "rgba(195,160,89,0.06)" : "transparent",
@@ -150,9 +243,9 @@ export function LessonView({
                 >
                   <div className="shrink-0 mt-0.5">
                     {checkedItems[idx] ? (
-                      <CheckCircle className="w-4 h-4" style={{ color: "#b47d2e" }} />
+                      <CheckCircle className="w-5 h-5" style={{ color: "#b47d2e" }} />
                     ) : (
-                      <Circle className="w-4 h-4 opacity-30 group-hover:opacity-60 transition-opacity" />
+                      <Circle className="w-5 h-5 opacity-30 group-hover:opacity-60 transition-opacity" />
                     )}
                   </div>
                   <span
@@ -196,53 +289,17 @@ export function LessonView({
             </div>
           </div>
         </div>
-
-        {/* RIGHT: Resources sidebar */}
-        <div className="md:col-span-1">
-          <div className="sticky top-24 space-y-4">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <FileText className="w-3.5 h-3.5 opacity-50" />
-                <p className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Resource Drawer</p>
-              </div>
-              <div className="space-y-3">
-                {module.resources.map((resource, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-3 p-4 rounded-xl border border-foreground/8 bg-muted hover:border-foreground/20 transition-colors cursor-pointer group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center shrink-0 group-hover:bg-foreground/15 transition-colors">
-                      <FileText className="w-3.5 h-3.5 opacity-60" />
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold leading-snug opacity-80">{resource}</p>
-                      <p className="text-[8px] uppercase tracking-widest opacity-30 mt-0.5">Download PDF</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Module progress indicator */}
-            <div className="mt-6 p-4 rounded-xl border border-foreground/8 bg-muted">
-              <p className="text-[9px] uppercase tracking-widest font-bold opacity-30 mb-2">Module</p>
-              <p className="text-[10px] font-light opacity-60">
-                <span className="font-bold opacity-100">{module.id}</span> of {totalModules}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Previous / Next Navigation */}
-      <div className="px-8 py-8 mt-4 border-t border-foreground/5 flex justify-between items-center gap-4">
+      <div className="px-4 md:px-8 py-8 mt-4 border-t border-foreground/5 flex justify-between items-center gap-4">
         <button
           onClick={onPrev}
           disabled={module.id === 1}
-          className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold transition-opacity disabled:opacity-20 hover:opacity-100 opacity-50"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold transition-opacity disabled:opacity-20 hover:opacity-100 opacity-50 min-h-[44px] min-w-[44px] px-2"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          Previous
+          <span className="hidden sm:inline">Previous</span>
         </button>
 
         <div className="flex flex-col items-center gap-1">
@@ -268,9 +325,9 @@ export function LessonView({
         <button
           onClick={onNext}
           disabled={module.id === totalModules}
-          className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold transition-opacity disabled:opacity-20 hover:opacity-100 opacity-50"
+          className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold transition-opacity disabled:opacity-20 hover:opacity-100 opacity-50 min-h-[44px] min-w-[44px] px-2"
         >
-          Next
+          <span className="hidden sm:inline">Next</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </div>

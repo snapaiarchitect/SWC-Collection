@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2, Lock, Award, Download } from "lucide-react";
 import { PageTransition } from "@/components/PageTransition";
 import { LessonView } from "@/components/LessonView";
+import { ModuleListSkeleton } from "@/components/ModuleListSkeleton";
 import { curriculumModules, phases } from "@/data/curriculumData";
 import type { PhaseId } from "@/data/curriculumData";
 import { useProgress } from "@/hooks/useProgress";
@@ -18,9 +19,10 @@ const INCOME_STREAMS = [
 
 export default function Curriculum() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [lastViewedId, setLastViewedId] = useState<number | null>(null);
   const [activePhase, setActivePhase] = useState<PhaseId | "all">("all");
   const [confettiFired, setConfettiFired] = useState(false);
-  const [phaseVisible, setPhaseVisible] = useState(true);
+  const [showSkeleton, setShowSkeleton] = useState(true);
 
   const {
     isComplete,
@@ -31,22 +33,40 @@ export default function Curriculum() {
     progressPct,
   } = useProgress();
 
+  useEffect(() => {
+    const t = setTimeout(() => setShowSkeleton(false), 1);
+    return () => clearTimeout(t);
+  }, []);
+
   const selectedModule = selectedId !== null
     ? curriculumModules.find((m) => m.id === selectedId) ?? null
     : null;
 
+  const handleOpenLesson = (id: number) => {
+    setSelectedId(id);
+    setLastViewedId(id);
+  };
+
   const handlePrev = () => {
-    if (selectedId && selectedId > 1) setSelectedId(selectedId - 1);
+    if (selectedId && selectedId > 1) {
+      const newId = selectedId - 1;
+      setSelectedId(newId);
+      setLastViewedId(newId);
+    }
   };
   const handleNext = () => {
-    if (selectedId && selectedId < totalCount) setSelectedId(selectedId + 1);
+    if (selectedId && selectedId < totalCount) {
+      const newId = selectedId + 1;
+      setSelectedId(newId);
+      setLastViewedId(newId);
+    }
   };
 
   const handlePhaseChange = (phase: PhaseId | "all") => {
-    setPhaseVisible(false);
+    setShowSkeleton(true);
     setTimeout(() => {
       setActivePhase(phase);
-      setPhaseVisible(true);
+      setTimeout(() => setShowSkeleton(false), 1);
     }, 180);
   };
 
@@ -240,55 +260,84 @@ export default function Curriculum() {
               })}
             </div>
 
-            {/* Module grid with fade transition */}
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2 transition-opacity duration-200"
-              style={{ opacity: phaseVisible ? 1 : 0 }}
-            >
-              {displayedModules.map((module) => {
-                const isDone = isComplete(module.id);
-                return (
-                  <button
-                    key={module.id}
-                    onClick={() => setSelectedId(module.id)}
-                    className="flex items-center gap-5 py-5 border-b border-foreground/[0.04] transition-all duration-300 hover:pl-3 hover:bg-muted/50 text-left w-full group"
-                  >
-                    {/* Number or checkmark */}
-                    <span className="w-6 shrink-0 flex items-center justify-center">
-                      {isDone ? (
-                        <svg
-                          width="16" height="16" viewBox="0 0 16 16" fill="none"
-                          className="shrink-0"
-                        >
-                          <circle cx="8" cy="8" r="7.5" stroke="#C5A059" strokeWidth="1" fill="rgba(197,160,89,0.08)" />
-                          <path d="M5 8.5L7 10.5L11 6" stroke="#C5A059" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      ) : (
-                        <span className="font-display text-sm italic font-bold opacity-20">
-                          {String(module.id).padStart(2, "0")}
-                        </span>
+            {/* Module grid — skeleton or real list */}
+            {showSkeleton ? (
+              <ModuleListSkeleton />
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2">
+                {displayedModules.map((module) => {
+                  const isDone = isComplete(module.id);
+                  const isLastViewed = !isDone && module.id === lastViewedId;
+
+                  return (
+                    <button
+                      key={module.id}
+                      onClick={() => handleOpenLesson(module.id)}
+                      className="flex items-center gap-5 py-5 border-b border-foreground/[0.04] transition-all duration-300 hover:pl-3 hover:bg-muted/50 text-left w-full group relative"
+                      style={isLastViewed ? {
+                        borderLeft: "2px solid rgba(197,160,89,0.6)",
+                        paddingLeft: "12px",
+                      } : undefined}
+                    >
+                      {/* Pulsing "Now Playing" dot for last-viewed modules */}
+                      {isLastViewed && (
+                        <span
+                          className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full"
+                          style={{ backgroundColor: "#C5A059" }}
+                          aria-hidden="true"
+                        />
                       )}
-                    </span>
 
-                    <div className="flex-1 min-w-0">
-                      <span
-                        className="text-[10px] uppercase tracking-widest font-semibold block transition-opacity"
-                        style={{ opacity: isDone ? 0.45 : 0.8 }}
-                      >
-                        {module.title}
+                      {/* Number, checkmark, or now-playing indicator */}
+                      <span className="w-6 shrink-0 flex items-center justify-center">
+                        {isDone ? (
+                          <svg
+                            width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            className="shrink-0"
+                          >
+                            <circle cx="8" cy="8" r="7.5" stroke="#C5A059" strokeWidth="1" fill="rgba(197,160,89,0.08)" />
+                            <path d="M5 8.5L7 10.5L11 6" stroke="#C5A059" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        ) : isLastViewed ? (
+                          <span
+                            className="w-2 h-2 rounded-full animate-pulse"
+                            style={{ backgroundColor: "#C5A059" }}
+                          />
+                        ) : (
+                          <span className="font-display text-sm italic font-bold opacity-20">
+                            {String(module.id).padStart(2, "0")}
+                          </span>
+                        )}
                       </span>
-                      <span className="text-[8px] uppercase tracking-widest opacity-30 mt-0.5 block">
-                        {module.duration}
-                      </span>
-                    </div>
 
-                    <Lock
-                      className="w-3 h-3 opacity-0 group-hover:opacity-20 transition-opacity shrink-0"
-                    />
-                  </button>
-                );
-              })}
-            </div>
+                      <div className="flex-1 min-w-0">
+                        <span
+                          className="text-[10px] uppercase tracking-widest font-semibold block transition-opacity"
+                          style={{ opacity: isDone ? 0.45 : 0.8 }}
+                        >
+                          {module.title}
+                        </span>
+                        <span className="text-[8px] uppercase tracking-widest opacity-30 mt-0.5 block">
+                          {module.duration}
+                        </span>
+                        {isLastViewed && (
+                          <span
+                            className="text-[8px] uppercase tracking-[0.2em] font-bold mt-1 block"
+                            style={{ color: "#b47d2e" }}
+                          >
+                            ▶ Resume
+                          </span>
+                        )}
+                      </div>
+
+                      <Lock
+                        className="w-3 h-3 opacity-0 group-hover:opacity-20 transition-opacity shrink-0"
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           <div className="mt-28 p-12 bg-muted rounded-2xl text-center border border-foreground/5 shadow-inner">

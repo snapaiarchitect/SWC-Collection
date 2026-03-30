@@ -58,4 +58,20 @@
   .income-pill {
     @apply bg-card border border-foreground/10 px-4 py-2 text-[9px] font-semibold tracking-widest rounded-full uppercase transition-all duration-300 hover:bg-muted hover:-translate-y-0.5;
   }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 0.05) 25%,
+      rgba(26, 26, 26, 0.12) 50%,
+      rgba(26, 26, 26, 0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
