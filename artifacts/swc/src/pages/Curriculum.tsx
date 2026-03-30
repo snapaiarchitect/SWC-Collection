@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2, Lock, Award, Download } from "lucide-react";
 import { PageTransition } from "@/components/PageTransition";
@@ -23,6 +23,8 @@ export default function Curriculum() {
   const [activePhase, setActivePhase] = useState<PhaseId | "all">("all");
   const [confettiFired, setConfettiFired] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(true);
+  const [listVisible, setListVisible] = useState(false);
+  const phaseTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const {
     isComplete,
@@ -34,7 +36,10 @@ export default function Curriculum() {
   } = useProgress();
 
   useEffect(() => {
-    const t = setTimeout(() => setShowSkeleton(false), 1);
+    const t = setTimeout(() => {
+      setShowSkeleton(false);
+      setListVisible(true);
+    }, 1);
     return () => clearTimeout(t);
   }, []);
 
@@ -63,11 +68,19 @@ export default function Curriculum() {
   };
 
   const handlePhaseChange = (phase: PhaseId | "all") => {
+    phaseTimers.current.forEach(clearTimeout);
+    phaseTimers.current = [];
     setShowSkeleton(true);
-    setTimeout(() => {
+    setListVisible(false);
+    const t1 = setTimeout(() => {
       setActivePhase(phase);
-      setTimeout(() => setShowSkeleton(false), 1);
+      const t2 = setTimeout(() => {
+        setShowSkeleton(false);
+        setListVisible(true);
+      }, 1);
+      phaseTimers.current.push(t2);
     }, 180);
+    phaseTimers.current.push(t1);
   };
 
   const displayedModules = activePhase === "all"
@@ -102,6 +115,10 @@ export default function Curriculum() {
       frame();
     }
   }, [completedCount, totalCount, confettiFired]);
+
+  useEffect(() => {
+    return () => { phaseTimers.current.forEach(clearTimeout); };
+  }, []);
 
   return (
     <PageTransition>
@@ -264,7 +281,10 @@ export default function Curriculum() {
             {showSkeleton ? (
               <ModuleListSkeleton />
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2">
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 pl-2 transition-opacity duration-300"
+                style={{ opacity: listVisible ? 1 : 0 }}
+              >
                 {displayedModules.map((module) => {
                   const isDone = isComplete(module.id);
                   const isLastViewed = !isDone && module.id === lastViewedId;
