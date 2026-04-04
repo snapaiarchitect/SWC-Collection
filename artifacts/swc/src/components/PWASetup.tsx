@@ -1,19 +1,20 @@
-import { useRegisterSW } from "virtual:pwa-register/react";
+import { useRegisterSW } from 'virtual:pwa-register/react';
 
 export function PWASetup() {
   useRegisterSW({
-    onRegistered(sw) {
-      console.log("[SWC PWA] Service worker registered:", sw);
+    onRegistered(r) {
+      console.log('SW Registered:', r);
     },
     onNeedRefresh() {
-      console.log("[SWC PWA] Update found — new version available");
+      console.log('New version available, please refresh.');
     },
     onOfflineReady() {
-      console.log("[SWC PWA] App is ready for offline use");
+      console.log('Offline ready.');
     },
-    onRegisterError(err) {
-      console.warn("[SWC PWA] Service worker registration failed:", err);
+    onRegisterError(error) {
+      console.log('SW registration error:', error);
     },
   });
-  return null;
+
+  return null; // This component doesn't render anything
 }
