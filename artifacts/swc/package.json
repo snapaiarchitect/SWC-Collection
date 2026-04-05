@@ -78,6 +78,7 @@
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",
-    "canvas-confetti": "^1.9.4"
+    "canvas-confetti": "^1.9.4",
+    "@workspace/replit-auth-web": "workspace:*"
   }
 }

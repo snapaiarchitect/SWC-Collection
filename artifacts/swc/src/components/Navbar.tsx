@@ -1,5 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useEffect, useState } from "react";
+import { useAuth } from "@workspace/replit-auth-web";
+import { LogIn, LogOut, User } from "lucide-react";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -7,6 +9,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
   const isHome = location === "/" || location === "";
+  const { user, isLoading, isAuthenticated, login, logout } = useAuth();
 
   const enrollHref = isHome ? "#pricing" : `${BASE}#pricing`;
 
@@ -38,6 +41,40 @@ export function Navbar() {
             >
               The Vault
             </Link>
+
+            {!isLoading && (
+              isAuthenticated ? (
+                <div className="flex items-center gap-3">
+                  {user?.profileImageUrl ? (
+                    <img
+                      src={user.profileImageUrl}
+                      alt={user.firstName ?? "Profile"}
+                      className="w-7 h-7 rounded-full object-cover border border-foreground/20"
+                    />
+                  ) : (
+                    <div className="w-7 h-7 rounded-full bg-foreground/10 flex items-center justify-center">
+                      <User className="w-3.5 h-3.5 opacity-60" />
+                    </div>
+                  )}
+                  <button
+                    onClick={logout}
+                    className="hidden md:flex items-center gap-1.5 text-[9px] uppercase tracking-widest font-semibold opacity-50 hover:opacity-100 transition-opacity"
+                  >
+                    <LogOut className="w-3 h-3" />
+                    Log out
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={login}
+                  className="hidden md:flex items-center gap-1.5 text-[9px] uppercase tracking-widest font-semibold opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  <LogIn className="w-3 h-3" />
+                  Log in
+                </button>
+              )
+            )}
+
             <a
               href={enrollHref}
               className="bg-foreground text-background px-6 py-2.5 text-[10px] uppercase font-bold rounded-full btn-luxury inline-block text-center"

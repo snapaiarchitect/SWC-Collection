@@ -91,6 +91,16 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `lib/replit-auth-web` (`@workspace/replit-auth-web`)
+
+Browser auth hook for Replit Auth (OIDC). Exports `useAuth()` which fetches auth state from `GET /api/auth/user`, and provides `login()` / `logout()` redirect helpers.
+
+- `src/use-auth.ts` — `useAuth()` hook
+- `src/index.ts` — barrel export
+- Import in web app components: `import { useAuth } from "@workspace/replit-auth-web";`
+- Do NOT use generated API client code for auth operations — always use this package.
+- Build declarations: `pnpm tsc -b lib/replit-auth-web`
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
